@@ -191,7 +191,20 @@
     <div class="post-body" itemprop="articleBody">
 
       
-          
+          <h1 id="sol-9-14"><a href="#sol-9-14" class="headerlink" title="sol 9.14"></a>sol 9.14</h1><p>(288/300)</p>
+<p>看错大样例是真的离谱。</p>
+<h2 id="A-check"><a href="#A-check" class="headerlink" title="A check"></a>A check</h2><p>没啥可说的， $ans=1^2+2^2+…+n^2=n*(n+1)*(2n+1)/6$<br>n 1e9 -&gt; ans 1e27 所以需要高精</p>
+<h2 id="B-color"><a href="#B-color" class="headerlink" title="B color"></a>B color</h2><p>BF:DFS选/不选+剪枝<br>时间复杂度：$O(2^{2n})或O(C_{2n}^{n})$<br>期望得分：<del>30-50</del> 95<br>（95%的数据 $ans&lt;=10^4$ 可还行）<br>SOL:meet in the middle<br>搜索前n个字符那些为红色，由于红蓝字符串相同就可以确定字符串，将此字符串hash，搜索后一半计数即可<br>时间复杂度：$O(2^n)$</p>
+<h2 id="C-triangle"><a href="#C-triangle" class="headerlink" title="C triangle"></a>C triangle</h2><p>根据皮克定理：多边形面积 A 和内部格点数目 1、边上格点数目 b 的关系为：$A=i+\frac {b}{2}-1$。<br>如果知道了三角形的三个顶点，容易求出面积，而边上整点数目可以通过gcd求得，即可求得三角形内部顶点数<br>对于找出图中所有三角形，可使用三元环计数在$O(n<em>\sqrt{n})$复杂度下解决<br>因此此题可在$O(n</em>\sqrt{n}<em>\log{n})$复杂度下解决<br>但这样只能得到88分<br>解决方法是在求三元环枚举点时处理出与相邻点的gcd，即可去掉log<br>时间复杂度：$O(n</em>\sqrt{n})$</p>
+<p>总结：C题看错大样例，全场一直在调试而没有着手优化，导致C题未能通过</p>
+<h1 id="sol-9-17"><a href="#sol-9-17" class="headerlink" title="sol 9.17"></a>sol 9.17</h1><p>(150/300)</p>
+<p>我怎么又用假数据叉了真算法啊。。。</p>
+<p><del>为什么要出毒瘤数据结构啊</del></p>
+<h2 id="A-dream"><a href="#A-dream" class="headerlink" title="A dream"></a>A dream</h2><p>显然，ans为最小生成树+不在最小生成树内的最小的边<br>时间复杂度：$O(n*\log{n})$</p>
+<h2 id="B-tree"><a href="#B-tree" class="headerlink" title="B tree"></a>B tree</h2><p>$ans=2<em>子树内所有边权之和-子树直径$<br>用线段树维护直径，在dfs时合并<br>若维护最长的向上的链，代码编写较为繁琐<br>但可维护直径的两个端点，在合并时，直径是四个点中两两距离最大的一组，代码难度较低<br>时间复杂度：$O(n</em>\log{n})$</p>
+<h2 id="C-jump"><a href="#C-jump" class="headerlink" title="C jump"></a>C jump</h2><p>dp， $f[i][0/1/2]$ 表示前 $i$ 个格子，上一步跳跃/上一步不跳跃但各点皆能到达/上一步不跳跃且i-1与i不连通的最小代价<br>转移是较为简易的，讨论即可<br>时间复杂度：$O(n)$</p>
+<p>总结：C想到dp后用假数据叉了真算法，然后B也没有调试出来…</p>
+
       
     </div>
 
