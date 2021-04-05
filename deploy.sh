@@ -1,6 +1,6 @@
 hexo clean
 hexo generate
 git add .
-git commit -m "..."
-git push source hexo
+git commit -m "update"
+git push
 hexo deploy

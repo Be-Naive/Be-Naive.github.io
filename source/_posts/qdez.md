@@ -16,7 +16,7 @@ mathjax: true
 
 没啥可说的， $ans=1^2+2^2+...+n^2=n*(n+1)*(2n+1)/6$
 
-n 1e9 -> ans 1e27 所以需要高精
+n 1e9 -> ans 1e27 所以需要~~int128~~高精
 
 ## B color
 
