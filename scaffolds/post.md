@@ -3,6 +3,6 @@ title: {{ title }}
 date: {{ date }}
 updated: {{ date }}
 tags:
-description:
+description: No Description
 mathjax: true
 ---
