@@ -1,0 +1,536 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=2">
+<meta name="theme-color" content="#222">
+<meta name="generator" content="Hexo 5.4.0">
+  <link rel="apple-touch-icon" sizes="180x180" href="/images/apple-touch-icon-next.png">
+  <link rel="icon" type="image/png" sizes="32x32" href="/images/favicon-32x32-next.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="/images/favicon-16x16-next.png">
+  <link rel="mask-icon" href="/images/logo.svg" color="#222">
+
+<link rel="stylesheet" href="/css/main.css">
+
+
+<link rel="stylesheet" href="/lib/font-awesome/css/all.min.css">
+
+<script id="hexo-configurations">
+    var NexT = window.NexT || {};
+    var CONFIG = {"hostname":"example.com","root":"/","scheme":"Pisces","version":"7.8.0","exturl":false,"sidebar":{"position":"left","display":"post","padding":18,"offset":12,"onmobile":false},"copycode":{"enable":false,"show_result":false,"style":null},"back2top":{"enable":true,"sidebar":false,"scrollpercent":false},"bookmark":{"enable":false,"color":"#222","save":"auto"},"fancybox":false,"mediumzoom":false,"lazyload":false,"pangu":false,"comments":{"style":"tabs","active":null,"storage":true,"lazyload":false,"nav":null},"algolia":{"hits":{"per_page":10},"labels":{"input_placeholder":"Search for Posts","hits_empty":"We didn't find any results for the search: ${query}","hits_stats":"${hits} results found in ${time} ms"}},"localsearch":{"enable":false,"trigger":"auto","top_n_per_article":1,"unescape":false,"preload":false},"motion":{"enable":true,"async":false,"transition":{"post_block":"fadeIn","post_header":"slideDownIn","post_body":"slideDownIn","coll_header":"slideLeftIn","sidebar":"slideUpIn"}}};
+  </script>
+
+  <meta name="description" content="厄运，终于结束了呢">
+<meta property="og:type" content="article">
+<meta property="og:title" content="SDOI2021 游记">
+<meta property="og:url" content="http://example.com/2021/04/15/SDOI2021/index.html">
+<meta property="og:site_name" content="BeNaive">
+<meta property="og:description" content="厄运，终于结束了呢">
+<meta property="og:locale" content="zh_CN">
+<meta property="og:image" content="https://benaive.xyz/images/sdoi2021d1t2.png">
+<meta property="og:image" content="https://benaive.xyz/images/411night.png">
+<meta property="article:published_time" content="2021-04-15T08:14:11.000Z">
+<meta property="article:modified_time" content="2021-04-15T08:14:11.000Z">
+<meta property="article:author" content="BeNaive">
+<meta property="article:tag" content="游记">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:image" content="https://benaive.xyz/images/sdoi2021d1t2.png">
+
+<link rel="canonical" href="http://example.com/2021/04/15/SDOI2021/">
+
+
+<script id="page-configurations">
+  // https://hexo.io/docs/variables.html
+  CONFIG.page = {
+    sidebar: "",
+    isHome : false,
+    isPost : true,
+    lang   : 'zh-CN'
+  };
+</script>
+
+  <title>SDOI2021 游记 | BeNaive</title>
+  
+
+
+
+
+
+
+  <noscript>
+  <style>
+  .use-motion .brand,
+  .use-motion .menu-item,
+  .sidebar-inner,
+  .use-motion .post-block,
+  .use-motion .pagination,
+  .use-motion .comments,
+  .use-motion .post-header,
+  .use-motion .post-body,
+  .use-motion .collection-header { opacity: initial; }
+
+  .use-motion .site-title,
+  .use-motion .site-subtitle {
+    opacity: initial;
+    top: initial;
+  }
+
+  .use-motion .logo-line-before i { left: initial; }
+  .use-motion .logo-line-after i { right: initial; }
+  </style>
+</noscript>
+
+</head>
+
+<body itemscope itemtype="http://schema.org/WebPage">
+  <div class="container use-motion">
+    <div class="headband"></div>
+
+    <header class="header" itemscope itemtype="http://schema.org/WPHeader">
+      <div class="header-inner"><div class="site-brand-container">
+  <div class="site-nav-toggle">
+    <div class="toggle" aria-label="切换导航栏">
+      <span class="toggle-line toggle-line-first"></span>
+      <span class="toggle-line toggle-line-middle"></span>
+      <span class="toggle-line toggle-line-last"></span>
+    </div>
+  </div>
+
+  <div class="site-meta">
+
+    <a href="/" class="brand" rel="start">
+      <span class="logo-line-before"><i></i></span>
+      <h1 class="site-title">BeNaive</h1>
+      <span class="logo-line-after"><i></i></span>
+    </a>
+      <p class="site-subtitle" itemprop="description">OIer</p>
+  </div>
+
+  <div class="site-nav-right">
+    <div class="toggle popup-trigger">
+    </div>
+  </div>
+</div>
+
+
+
+
+<nav class="site-nav">
+  <ul id="menu" class="main-menu menu">
+        <li class="menu-item menu-item-home">
+
+    <a href="/" rel="section"><i class="fa fa-home fa-fw"></i>首页</a>
+
+  </li>
+        <li class="menu-item menu-item-archives">
+
+    <a href="/archives/" rel="section"><i class="fa fa-archive fa-fw"></i>归档</a>
+
+  </li>
+  </ul>
+</nav>
+
+
+
+
+</div>
+    </header>
+
+    
+  <div class="back-to-top">
+    <i class="fa fa-arrow-up"></i>
+    <span>0%</span>
+  </div>
+
+
+    <main class="main">
+      <div class="main-inner">
+        <div class="content-wrap">
+          
+
+          <div class="content post posts-expand">
+            
+
+    
+  
+  
+  <article itemscope itemtype="http://schema.org/Article" class="post-block" lang="zh-CN">
+    <link itemprop="mainEntityOfPage" href="http://example.com/2021/04/15/SDOI2021/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="image" content="/images/avatar.gif">
+      <meta itemprop="name" content="BeNaive">
+      <meta itemprop="description" content="">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="BeNaive">
+    </span>
+      <header class="post-header">
+        <h1 class="post-title" itemprop="name headline">
+          SDOI2021 游记
+        </h1>
+
+        <div class="post-meta">
+            <span class="post-meta-item">
+              <span class="post-meta-item-icon">
+                <i class="far fa-calendar"></i>
+              </span>
+              <span class="post-meta-item-text">发表于</span>
+
+              <time title="创建时间：2021-04-15 16:14:11" itemprop="dateCreated datePublished" datetime="2021-04-15T16:14:11+08:00">2021-04-15</time>
+            </span>
+
+          
+            <div class="post-description">厄运，终于结束了呢</div>
+
+        </div>
+      </header>
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+        <h2 id="Day-n"><a href="#Day-n" class="headerlink" title="Day -n"></a>Day -n</h2><p>lky：wzm，我好慌怎么办</p>
+<p>我（指着fivethirtyeight的预测）：你看NBA第七进前八的概率都有97%，你现在rk12进队的概率至少97%</p>
+<p>（FLAG高高挂）</p>
+<h2 id="Day-0"><a href="#Day-0" class="headerlink" title="Day 0"></a>Day 0</h2><p>因为一些问题要去医院检查所以前一天就跑路了</p>
+<p>在医院检查完就出发去临沂了 路上想敲板子结果颓掉了</p>
+<p>刚到酒店房间就遇到警察来治安检查<del>扫黑除恶</del></p>
+<p>去试机之前和sun在酒店门口听到有人说“你看hyw现在排名这么高，你们俩肯定打不过”（<del>“你们俩”一定指我和我</del>）</p>
+<p>路上随口奶了一句“我这次应该希望榜乱一些，榜越乱对我越有利”</p>
+<p>试机发现位置实在是有点小，比较难受</p>
+<h2 id="Day-1"><a href="#Day-1" class="headerlink" title="Day 1"></a>Day 1</h2><p>进场前发现min25之类的都不会，有亿点慌</p>
+<p>看题发现A好像是简单数据结构，B是看起来像原题可惜我不会的构造，C完全不会</p>
+<p>先去开A，推了下结论发现两排一起sort之后双指针就好了</p>
+<p>sort的log肯定没法去，我选择相信CCF少爷机，9点多拍上扔了</p>
+<p>去推B，感觉外面一圈每相邻两个之和都能推范围的话随便构造一下就好了</p>
+<p>然后就发现它锅了，还要有更多限制</p>
+<p>推了一波感觉是差分约束，列了下式子发现有些约束是和有些是差，好像没法做</p>
+<p>心态小崩，还剩2h先去看C了，发现直接 $n$ 张图tarjan可能是 $n^2m$ 或者 $nm^2$ 的，可能能冲过去44</p>
+<p>开写，用了50min左右调过大样例就扔那里了</p>
+<p>还剩不到1.5h了，算了一下自己怎么都上不了200，突然就很慌，去厕所冷静了下</p>
+<p>回来看B，发现还是什么都推不出来，只好跑去写 $m=2$ 和 $n,m\le3$ 了</p>
+<p>$m=2$ 很快写出来，但是 $n,m\le3$ 各种挂，调了很久才过了手造小数据（怎么不给个大样例啊）</p>
+<p>还剩30min左右，看了下A没拍出锅，造了组1e6的数据跑了下，发现跑了0.96~0.98s，就有点虚</p>
+<p>不过看了看没有任何能卡常的地方（<del>fread是一定不会写的</del>），就只能不管它了，去检查文件名</p>
+<p>检查完还剩15min左右，突然想去冲一波B的 $a_{i,j}\le1$ </p>
+<p>乱搞了一个解法，在结束前3min过了编译</p>
+<p>1min后，随手造了组数据就发现它锅了</p>
+<p>这时候我突发奇想，把这一段所有的相邻两个和取最小改成取最大，发现过了刚才两组数据，不过肯定还是锅的</p>
+<p>不过还是把它放到了B剩下的所有部分分上，然后把它交了上去，弄好的时候只剩下不到1min了</p>
+<p>那时我还不知道，在这最后几分钟内乱写的东西会带来多么魔幻的事情</p>
+<p>估分 $100+50+44=194$</p>
+<p>出来发现sun好像有点不太好，hyw还是很稳，Rainair好像还行</p>
+<p>lky自称OI生涯结束了并一直坚称A题挂没，我表示无法理解，不过他下午的确很自闭qwq</p>
+<p>感觉考完心力交瘁，就一直在颓也没怎么复习</p>
+<h2 id="Day-2"><a href="#Day-2" class="headerlink" title="Day 2"></a>Day 2</h2><h3 id="场上"><a href="#场上" class="headerlink" title="场上"></a>场上</h3><p>吃早饭时候突然想起昨天没开Wall，就随口和sun说了一句</p>
+<p>看压缩包看到有道题输入很短，感觉有计数也不是很好</p>
+<p>开题发现A还是简单数据结构，C还是有向图，B是个状压，好像AB都比较可做</p>
+<p>想了下A，感觉二分+倍增应该可以2log，还是好写的</p>
+<p>写了一波大概9:10左右写完，一测大样例发现锅了</p>
+<p>用对拍造了组小数据调错，发现我找每个点上面第一个某颜色的点，好像还不是很能做</p>
+<p>自我安慰这题肯定没锅，去想这个问题，发现应该是把询问挂到树上再dfs就可</p>
+<p>改完之后大概9:45拍上，测了下大样例发现跑了0.99s</p>
+<p>当时以为时限1s，就很慌，想自己造极限数据发现造不过大样例/px</p>
+<p>只能放那里去开B了，结果B我读错题了。。。把排列数读成划分数了/px</p>
+<p>想了很久状压又打了个暴力才发现读错题了。。。然后发现原来暴力有60</p>
+<p>继续想状压，发现我只会 $2^n<em>n</em>m^2$ 的，一算这个比阶乘都慢/px</p>
+<p>后来发现有一维可以变成 $\frac{m}{popcnt(i)}$ ，不过算了一下还是过不了任何&gt;60的分</p>
+<p>没办法只能把阶乘扔在那溜了</p>
+<p>这时候回头看了看A，突然发现时限2s。。。那没事了</p>
+<p>去看C发现暴力30和树15应该很好写，就先把这些写掉了，这时候大概11:30多点</p>
+<p>然后试图去写一种奇怪的bitset，直到终场什么都没写出来。。。在3h之后一分不得/px</p>
+<p>估分 $100+60+45=205$</p>
+<p>出来hyw说C的bitset拍不过…那还好，不过lsq写了个神仙spfa算法好像能过Orz</p>
+<p>sun说B可以差分就是 $2^n<em>n^2</em>m$ 了。。。还是菜了</p>
+<p>lky这次可能真的挂了。。。写了3h的A结果假了。。。</p>
+<h3 id="当晚"><a href="#当晚" class="headerlink" title="当晚"></a>当晚</h3><p>回到青岛，代码发了</p>
+<p>在洛谷上发现有人造了民间数据，就去测了一下</p>
+<p>一开始只有d1t1和d2t1，结果lky d1t1&amp;d2t1真的挂了，fqt这题也挂了，hyw和lsq d1t1挂了，感觉到了一丝诡异</p>
+<p>后来六题民间数据都出来了，我一测，d1t2是个55？？？前20挂了，乱写的 $a_{i,j}\le1$ 那档过了？？？</p>
+<p>找到我代码仔细一看：</p>
+<p><img src="https://benaive.xyz/images/sdoi2021d1t2.png" alt=""></p>
+<p>我能说什么好呢。。。后来又发现我没判 $m=3,n=2$ 。。。</p>
+<p>这时候上QQ看了看，得到了一个又一个震惊的消息：</p>
+<p>hyw的d1t2忘删调试，挂没了</p>
+<p>lky的d1t2挂没了</p>
+<p>Rainair的d1t1把fread写挂了，只能读一次，挂成了40</p>
+<p>sun在d2t2用%d输出了long long，视系统而定可能挂到80甚至挂没？？？</p>
+<p>那晚的QQ里，是这样句式的重复：</p>
+<p><img src="https://benaive.xyz/images/411night.png" alt=""></p>
+<p>从未见过，这般的挂题大赛。。。</p>
+<p>等等，我是不是说过，榜越乱对我越有利？？？</p>
+<p>我是不是还在第二天早晨，说了一句开Wall？？？</p>
+<p>怎么回事啊。。。吓傻了</p>
+<h2 id="Day-3"><a href="#Day-3" class="headerlink" title="Day 3"></a>Day 3</h2><p>民间榜出来了，lky可能是真的无了…</p>
+<p>真的是太惨了啊，5年OI历程却是这样的终结…有点伤感</p>
+<p>sun还是稳A队，Rainair和sqy应该翻回来了</p>
+<p>我好像也翻盘了？？有点神奇</p>
+<p>这天下午，突然发现一件事情：</p>
+<p>我的d1t2 $a_{i,j}\le1$ 那一档，好像是一个 $n,m$ 越小越容易挂的假做法。。。</p>
+<p>当 $n\ge10$ 时，这个算法几乎不可能出错，所以在各大民间数据中，这道题一直有 $\ge55$ 的分数</p>
+<p>所以，我在结束前最后3分钟所改的那个地方，可能让我成为了唯一的挂分为负选手？？</p>
+<p>魔幻。。。。。</p>
+<p>某份通知里的24小时内出成绩没能兑现，新的官方成绩时间定在4.14 10:00</p>
+<h2 id="Day-4"><a href="#Day-4" class="headerlink" title="Day 4"></a>Day 4</h2><p>没有出成绩。</p>
+<p>原来d1t2的差分约束就是选所有奇数位的变量取相反数，然后就只有差了/px</p>
+<p>造了组数据把我的d1t3卡成 $nm^2$ ，发现44pts可能拿不到了</p>
+<p>于是，我命运可能更加寄托在了d1t2的那25分上。。。</p>
+<h2 id="Day-5"><a href="#Day-5" class="headerlink" title="Day 5"></a>Day 5</h2><p>10:00过去了，没有出成绩<del>，只有鸽子破壳</del></p>
+<h2 id="Day-6"><a href="#Day-6" class="headerlink" title="Day 6"></a>Day 6</h2><p>官方榜出了，我的d1t1被卡常变成90，但d1t2非常令人无语的变成了75，其他题符合预期</p>
+<p>但这并没有改变任何人的命运，退役的人们仍旧没能留下</p>
+<p>不过fqt写挂了d2t3的树然后拿到了队线外第一名？？？怎么回事啊</p>
+<blockquote>
+<p>동-지는 간데없고 깃-발만 나부껴<br>同志已经离去 只留下旗帜在飘扬</p>
+<p>​                                                        ——《光州之歌（献给你的进行曲）》</p>
+</blockquote>
+<p>不过对我来说，这个赛季的厄运，是终于结束了呢。</p>
+
+    </div>
+
+    
+    
+    
+
+      <footer class="post-footer">
+          <div class="post-tags">
+              <a href="/tags/%E6%B8%B8%E8%AE%B0/" rel="tag"># 游记</a>
+          </div>
+
+        
+
+
+        
+    <div class="post-nav">
+      <div class="post-nav-item">
+    <a href="/2021/03/28/memo/" rel="prev" title="memo">
+      <i class="fa fa-chevron-left"></i> memo
+    </a></div>
+      <div class="post-nav-item">
+    <a href="/9999/04/05/about/" rel="next" title="About Me">
+      About Me <i class="fa fa-chevron-right"></i>
+    </a></div>
+    </div>
+      </footer>
+    
+  </article>
+  
+  
+  
+
+
+
+          </div>
+          
+
+<script>
+  window.addEventListener('tabs:register', () => {
+    let { activeClass } = CONFIG.comments;
+    if (CONFIG.comments.storage) {
+      activeClass = localStorage.getItem('comments_active') || activeClass;
+    }
+    if (activeClass) {
+      let activeTab = document.querySelector(`a[href="#comment-${activeClass}"]`);
+      if (activeTab) {
+        activeTab.click();
+      }
+    }
+  });
+  if (CONFIG.comments.storage) {
+    window.addEventListener('tabs:click', event => {
+      if (!event.target.matches('.tabs-comment .tab-content .tab-pane')) return;
+      let commentClass = event.target.classList[1];
+      localStorage.setItem('comments_active', commentClass);
+    });
+  }
+</script>
+
+        </div>
+          
+  
+  <div class="toggle sidebar-toggle">
+    <span class="toggle-line toggle-line-first"></span>
+    <span class="toggle-line toggle-line-middle"></span>
+    <span class="toggle-line toggle-line-last"></span>
+  </div>
+
+  <aside class="sidebar">
+    <div class="sidebar-inner">
+
+      <ul class="sidebar-nav motion-element">
+        <li class="sidebar-nav-toc">
+          文章目录
+        </li>
+        <li class="sidebar-nav-overview">
+          站点概览
+        </li>
+      </ul>
+
+      <!--noindex-->
+      <div class="post-toc-wrap sidebar-panel">
+          <div class="post-toc motion-element"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#Day-n"><span class="nav-number">1.</span> <span class="nav-text">Day -n</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#Day-0"><span class="nav-number">2.</span> <span class="nav-text">Day 0</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#Day-1"><span class="nav-number">3.</span> <span class="nav-text">Day 1</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#Day-2"><span class="nav-number">4.</span> <span class="nav-text">Day 2</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#%E5%9C%BA%E4%B8%8A"><span class="nav-number">4.1.</span> <span class="nav-text">场上</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E5%BD%93%E6%99%9A"><span class="nav-number">4.2.</span> <span class="nav-text">当晚</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#Day-3"><span class="nav-number">5.</span> <span class="nav-text">Day 3</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#Day-4"><span class="nav-number">6.</span> <span class="nav-text">Day 4</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#Day-5"><span class="nav-number">7.</span> <span class="nav-text">Day 5</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#Day-6"><span class="nav-number">8.</span> <span class="nav-text">Day 6</span></a></li></ol></div>
+      </div>
+      <!--/noindex-->
+
+      <div class="site-overview-wrap sidebar-panel">
+        <div class="site-author motion-element" itemprop="author" itemscope itemtype="http://schema.org/Person">
+  <p class="site-author-name" itemprop="name">BeNaive</p>
+  <div class="site-description" itemprop="description"></div>
+</div>
+<div class="site-state-wrap motion-element">
+  <nav class="site-state">
+      <div class="site-state-item site-state-posts">
+          <a href="/archives/">
+        
+          <span class="site-state-item-count">7</span>
+          <span class="site-state-item-name">日志</span>
+        </a>
+      </div>
+      <div class="site-state-item site-state-tags">
+        <span class="site-state-item-count">3</span>
+        <span class="site-state-item-name">标签</span>
+      </div>
+  </nav>
+</div>
+
+
+
+      </div>
+
+    </div>
+  </aside>
+  <div id="sidebar-dimmer"></div>
+
+
+      </div>
+    </main>
+
+    <footer class="footer">
+      <div class="footer-inner">
+        
+
+        
+
+<div class="copyright">
+  
+  &copy; 
+  <span itemprop="copyrightYear">2021</span>
+  <span class="with-love">
+    <i class="fa fa-heart"></i>
+  </span>
+  <span class="author" itemprop="copyrightHolder">BeNaive</span>
+</div>
+  <div class="powered-by">由 <a href="https://hexo.io" class="theme-link" rel="noopener" target="_blank">Hexo</a> & <a href="https://pisces.theme-next.org" class="theme-link" rel="noopener" target="_blank">NexT.Pisces</a> 强力驱动
+  </div>
+
+        
+
+
+
+
+
+
+
+
+      </div>
+    </footer>
+  </div>
+
+  
+  <script src="/lib/anime.min.js"></script>
+  <script src="/lib/velocity/velocity.min.js"></script>
+  <script src="/lib/velocity/velocity.ui.min.js"></script>
+
+<script src="/js/utils.js"></script>
+
+<script src="/js/motion.js"></script>
+
+
+<script src="/js/schemes/pisces.js"></script>
+
+
+<script src="/js/next-boot.js"></script>
+
+
+
+
+  
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  
+
+  
+      
+
+<script>
+  if (typeof MathJax === 'undefined') {
+    window.MathJax = {
+      loader: {
+        source: {
+          '[tex]/amsCd': '[tex]/amscd',
+          '[tex]/AMScd': '[tex]/amscd'
+        }
+      },
+      tex: {
+        inlineMath: {'[+]': [['$', '$']]},
+        tags: 'ams'
+      },
+      options: {
+        renderActions: {
+          findScript: [10, doc => {
+            document.querySelectorAll('script[type^="math/tex"]').forEach(node => {
+              const display = !!node.type.match(/; *mode=display/);
+              const math = new doc.options.MathItem(node.textContent, doc.inputJax[0], display);
+              const text = document.createTextNode('');
+              node.parentNode.replaceChild(text, node);
+              math.start = {node: text, delim: '', n: 0};
+              math.end = {node: text, delim: '', n: 0};
+              doc.math.push(math);
+            });
+          }, '', false],
+          insertedScript: [200, () => {
+            document.querySelectorAll('mjx-container').forEach(node => {
+              let target = node.parentNode;
+              if (target.nodeName.toLowerCase() === 'li') {
+                target.parentNode.classList.add('has-jax');
+              }
+            });
+          }, '', false]
+        }
+      }
+    };
+    (function () {
+      var script = document.createElement('script');
+      script.src = '//cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js';
+      script.defer = true;
+      document.head.appendChild(script);
+    })();
+  } else {
+    MathJax.startup.document.state(0);
+    MathJax.texReset();
+    MathJax.typeset();
+  }
+</script>
+
+    
+
+  
+
+</body>
+</html>

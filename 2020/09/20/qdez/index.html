@@ -1,0 +1,450 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=2">
+<meta name="theme-color" content="#222">
+<meta name="generator" content="Hexo 5.4.0">
+  <link rel="apple-touch-icon" sizes="180x180" href="/images/apple-touch-icon-next.png">
+  <link rel="icon" type="image/png" sizes="32x32" href="/images/favicon-32x32-next.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="/images/favicon-16x16-next.png">
+  <link rel="mask-icon" href="/images/logo.svg" color="#222">
+
+<link rel="stylesheet" href="/css/main.css">
+
+
+<link rel="stylesheet" href="/lib/font-awesome/css/all.min.css">
+
+<script id="hexo-configurations">
+    var NexT = window.NexT || {};
+    var CONFIG = {"hostname":"example.com","root":"/","scheme":"Pisces","version":"7.8.0","exturl":false,"sidebar":{"position":"left","display":"post","padding":18,"offset":12,"onmobile":false},"copycode":{"enable":false,"show_result":false,"style":null},"back2top":{"enable":true,"sidebar":false,"scrollpercent":false},"bookmark":{"enable":false,"color":"#222","save":"auto"},"fancybox":false,"mediumzoom":false,"lazyload":false,"pangu":false,"comments":{"style":"tabs","active":null,"storage":true,"lazyload":false,"nav":null},"algolia":{"hits":{"per_page":10},"labels":{"input_placeholder":"Search for Posts","hits_empty":"We didn't find any results for the search: ${query}","hits_stats":"${hits} results found in ${time} ms"}},"localsearch":{"enable":false,"trigger":"auto","top_n_per_article":1,"unescape":false,"preload":false},"motion":{"enable":true,"async":false,"transition":{"post_block":"fadeIn","post_header":"slideDownIn","post_body":"slideDownIn","coll_header":"slideLeftIn","sidebar":"slideUpIn"}}};
+  </script>
+
+  <meta name="description" content="我怎么挖过这个坑">
+<meta property="og:type" content="article">
+<meta property="og:title" content="校内模拟赛题解">
+<meta property="og:url" content="http://example.com/2020/09/20/qdez/index.html">
+<meta property="og:site_name" content="BeNaive">
+<meta property="og:description" content="我怎么挖过这个坑">
+<meta property="og:locale" content="zh_CN">
+<meta property="article:published_time" content="2020-09-20T07:45:40.000Z">
+<meta property="article:modified_time" content="2020-09-20T07:45:40.000Z">
+<meta property="article:author" content="BeNaive">
+<meta property="article:tag" content="题解">
+<meta property="article:tag" content="校内">
+<meta name="twitter:card" content="summary">
+
+<link rel="canonical" href="http://example.com/2020/09/20/qdez/">
+
+
+<script id="page-configurations">
+  // https://hexo.io/docs/variables.html
+  CONFIG.page = {
+    sidebar: "",
+    isHome : false,
+    isPost : true,
+    lang   : 'zh-CN'
+  };
+</script>
+
+  <title>校内模拟赛题解 | BeNaive</title>
+  
+
+
+
+
+
+
+  <noscript>
+  <style>
+  .use-motion .brand,
+  .use-motion .menu-item,
+  .sidebar-inner,
+  .use-motion .post-block,
+  .use-motion .pagination,
+  .use-motion .comments,
+  .use-motion .post-header,
+  .use-motion .post-body,
+  .use-motion .collection-header { opacity: initial; }
+
+  .use-motion .site-title,
+  .use-motion .site-subtitle {
+    opacity: initial;
+    top: initial;
+  }
+
+  .use-motion .logo-line-before i { left: initial; }
+  .use-motion .logo-line-after i { right: initial; }
+  </style>
+</noscript>
+
+</head>
+
+<body itemscope itemtype="http://schema.org/WebPage">
+  <div class="container use-motion">
+    <div class="headband"></div>
+
+    <header class="header" itemscope itemtype="http://schema.org/WPHeader">
+      <div class="header-inner"><div class="site-brand-container">
+  <div class="site-nav-toggle">
+    <div class="toggle" aria-label="切换导航栏">
+      <span class="toggle-line toggle-line-first"></span>
+      <span class="toggle-line toggle-line-middle"></span>
+      <span class="toggle-line toggle-line-last"></span>
+    </div>
+  </div>
+
+  <div class="site-meta">
+
+    <a href="/" class="brand" rel="start">
+      <span class="logo-line-before"><i></i></span>
+      <h1 class="site-title">BeNaive</h1>
+      <span class="logo-line-after"><i></i></span>
+    </a>
+      <p class="site-subtitle" itemprop="description">OIer</p>
+  </div>
+
+  <div class="site-nav-right">
+    <div class="toggle popup-trigger">
+    </div>
+  </div>
+</div>
+
+
+
+
+<nav class="site-nav">
+  <ul id="menu" class="main-menu menu">
+        <li class="menu-item menu-item-home">
+
+    <a href="/" rel="section"><i class="fa fa-home fa-fw"></i>首页</a>
+
+  </li>
+        <li class="menu-item menu-item-archives">
+
+    <a href="/archives/" rel="section"><i class="fa fa-archive fa-fw"></i>归档</a>
+
+  </li>
+  </ul>
+</nav>
+
+
+
+
+</div>
+    </header>
+
+    
+  <div class="back-to-top">
+    <i class="fa fa-arrow-up"></i>
+    <span>0%</span>
+  </div>
+
+
+    <main class="main">
+      <div class="main-inner">
+        <div class="content-wrap">
+          
+
+          <div class="content post posts-expand">
+            
+
+    
+  
+  
+  <article itemscope itemtype="http://schema.org/Article" class="post-block" lang="zh-CN">
+    <link itemprop="mainEntityOfPage" href="http://example.com/2020/09/20/qdez/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="image" content="/images/avatar.gif">
+      <meta itemprop="name" content="BeNaive">
+      <meta itemprop="description" content="">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="BeNaive">
+    </span>
+      <header class="post-header">
+        <h1 class="post-title" itemprop="name headline">
+          校内模拟赛题解
+        </h1>
+
+        <div class="post-meta">
+            <span class="post-meta-item">
+              <span class="post-meta-item-icon">
+                <i class="far fa-calendar"></i>
+              </span>
+              <span class="post-meta-item-text">发表于</span>
+
+              <time title="创建时间：2020-09-20 15:45:40" itemprop="dateCreated datePublished" datetime="2020-09-20T15:45:40+08:00">2020-09-20</time>
+            </span>
+
+          
+            <div class="post-description">我怎么挖过这个坑</div>
+
+        </div>
+      </header>
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+        <div class="hbe hbe-container" id="hexo-blog-encrypt" data-wpm="Oh, this is an invalid password. Check and try again, please." data-whm="OOPS, these decrypted content may changed, but you can still have a look.">
+  <script id="hbeData" type="hbeData" data-hmacdigest="8bbd821aeff265e274be0e63e1569209676089e5f12d3ffc411f29e63097761e">045f08e06f73ea963f9a99853c3f62e6b754aaad86809b21ee23d048a4040bbd2c9b68f457322cb45105cba086f3696d7a5a8a5f10b6f186f92e64c0aae72eac3d356962305747c8eba17e75ddcd76e5e156948e43715b65828c851afdc29eedba2b7cc70ef73ca30af4fb3eda8beec10a99800859a48070e2b9e317ddb656e72fd0477f46413c2bfd72466a3141c904e6c7f13f234fe9128174d7c179b7f6500a4df5bdfd1558001a5a3e5df5c9ec74b775f495837a0a171f625c5fea9cc909a6a3f4e67915be2916e7cd47d0f0d4f8c69008358fe602747b38cb4067c2a7d3a338f566b7e9c647d0cb06a2e71a99e5031ee4d2423fa54c0040531489c8d1798bc6f1d75be3d6e66c5d0d68d4693b79758b3503e9f183797d2fac6e8612f77c04b9c6dee5f524776766b717d77edc826fbbe400d39db01d1a843b3e7b8427dab6c05adf075c96e0345f77dfacb1b91ab60cecc07592b07582db9ceab63f578e6be741b6420e4fee3e8ff1921b550a93ca512377fc56f347d728b14f7587b84c2670fecd60f25cb6f0ea0c3b1052d2145d34e001d21ea6011b77d770dbb7db42b610fc009cf5af7f34f14beda685e03acefda7e5e809f1518d93184ac098eae6ca628c4fe936c758e9d4c2b24334adc09f42a0a2221e99cb4982b18c3f9994252fea1cbd345a97cee2e32f9d6612b4a0b27c5cc7ddbb821bb79d4c986a6967a39246de9a6d6294baa25fd1bd26a6230c352198336af94fbcd225f562c7e21044d0fb57aa5b27e05df50f1b60ab8af01546effdfe9ebb98bdd25830cd56a5307c9f859532147b06f048a9a3911a22e233cf8d0c8f96d00c1180c15ef5d164879ce79a9cdc23494db3d36b2a5a0c962969b7302c9ded257f90e8c552ab908ec9ad066df6564a787c368702d7ae2bf6d351e41a7aaeea0763535041c8a0d448cbb587751d6907bb5b557eefb3107755e6709428d657adf9fe31aafc50d1da4d0b40b038fe4e3de86710fb9d177af79f249ad7af0ee9fbb3fabea1e4631fe7c804b59328ab7e44f99d765696ddb9ee95fd5f0f855f2e47fb5cecdf6f87289a714fb1034fce620f36564ad2f1b5137cb71abc2eaee8ef51879bce26584ac61fb5e554b69ed379532d465b3d4e7ff489c224531ec33e3b73247805fdb9893ab5abec466185346c8557a4dbe7f133fb22d40e39302cdb43aec331eafdbb71a735109750ad36d5300a5de13af490a063501497b4c16817b98032a6e7c5f570bb4e453138fb5575378bbe145b34446717d97dc66bdd0f1a493fb55f6ebf4c8be3c1cef8ce2ff6bea6d8f489eb0c4e3a8a4d92c47855aeb5ad050854870690ae2aebc214bc902744f62f4e5c913a206dd7e06b14421f459c45760975e9fbc52a6546796eb3baa8a149360e94aa4481360d2ac1e5356c090f630af6775b7495c85d77ae1195b11939c82d46af6eba1ea48c0eab4a77f31507d5e55637c9f087a916f10bec1b15e55315eb1ecce2c184d0acbfbfcebf595d768ecdd29b0b8b9b1eac1050a6612e4d20b69c9f63953ca9b21b7a38506d4c4ca200ae8aa11a7e7f3e4c16d8403cb469aa43e90c14c24b5343126757b7da61dd6639a5046b4384a8c5e968c59d2149cede3cbeed52f4b57aa52451a026fda74cd6e057bab08e2533c5aad79be31b13c6e09abfa650b07c727a3abb50229f1ad3924d1209c75d216dd3a40a72213bacef33bbaaa3a1d6a4e17b5d29633644447c9c9517e59eb4c585cd84586b43fa46df30b9577e231b289db5a7b968a690102256fa78a9492b1efec63d37753d923070bc016fe759546dc98707bcf7b13d0904e73482ac955476ddca5b816c8e1ed5e1f84aae6eda4094c998d32ae7c952d06017819e59d38eb887e82cf0827682afb795271b017f4ec462932697930616ba49e5e21caab467b19da23f78aec2f62a9984b7175b08a95eb95104182806f299e6508a719f3ee30a38f6b0138868bd4bd31eb5c0022eb4a0548a61f647337fe008a2fb402609542b9bc9c3cbe493d0d0f0199ad44d289f853dd8e938e46fd3046ea5cfd3a109940e14590ab285d588e90e1799e89e7e0f28fc750b0059212529eb4cd5f668b1c4059cea3a66855ee40400510397383256c97800e6f9c2077fe8332dc40d4309397b72423aa0de53adee819f9a361eaf37ce8405eabfc3949466308da2b1183c7edce47c3000323fa39191a8d7bca592fa29c43b3b4fb3e3529ac2e8eb8a6760f28a4dfec9906d5b24081c63fe4bfb1d54d844b84a052aecad76522ad0914fcfb4dbfeeac582b6163f11ceb3c38596cb30f68186d104bd63ae4942f19144af8dfc6e3af35fbae511f5d211ea05628339bfad65f8441b000e78927bf858cf91ab71e5ef1289c94e6ebf6d947d2a28c95298242066ee9e3394a17116a85bf2de4d15a7061fab96dd20624da3529368f9f3cba84d214459a175dc42c1b662f1dbe4a3817606784a96486e4d15b9c8ec5c1a109821fd4226e236e60ff5c3e100abd2511b1ace1dc065d29aa251043546e49eaff01e004bb142fc93dd5b9e12bdd8dc887251739b7d87ad01e358c501660f17049d609a179dbdbe4f0aae529b841062eca18ef3b655e904bb5a5e70e8046547f8bbef57877672fdd840a9d2dac9da9688172051ae51b5eb158d6b594039fd1eee15cc63f38b5eafc7d5a231c013b59c10ab776f991c95e829fda74ff3db592b0806c68c7ee2b695fac79290fe77deb69f6322be3542c77cc9bb5ba04df802ef488153db00b741c2202a28dedc7f9a47244dae55ebbeb1f4eecf9eb5baef8c1ddc42fd469720cfd75b6138330c97c2f4b8730720df3e59a8a1d18e9606840cfac7ca7d0e1a46acae926fef011083f8f193c0fe3ef315b7a6410e6de93d19e648060f1b364cd6e2e1707b04df02a8a4e5b913f47155e1d0f62e8d5fc9dd73fa19ce3615100d474de7020da27c05784d89aff7e3ee3476907173ac89b0c09e411ca2cf8c0b87ecccec4eb75b12d1c3d34f9462710b0bdd6725d041b1e40e45089baa8131b6ce13f68176bb0660d17c8b2d72c2107ab088c00e49df35b8e5feb73dfce4cdc06fa2f3839bca864aedd74fb0bcaeb52575abd8009a7ec472c4ccf45fce920d7379fc68f0cbd86c0525fdc76224ee3708847973aa6f75c90d589f5cb9d82d56385a8a6dc7cd9b6ca5f79835c941c5d901bda921b85f6a886960784b4981fc1b9d3714d143b6a4f2ef7d7f490f4aea66d9321501a254219cbe97337b5e9131439a0908f112b2e6644fb2cab96ab5776ca09a41af1416baacc15b98665d722c6133d857af7e5c0ff93c2014fa0c4299a7e0f5e39a461910d4622b40dd0250b6574277db5449ecc0b3e6f25ca94ab2d8714c4f2f98cc7401a775a5c3e446cdadb4a6d2f2174f63bf133372dc992ea4b7b3fafa4f52b933b1aadb283c899d48f1a1dc04a5d6c2c1e001d5d6ed107fd56b2e1f2cca3a649aa5d0f10bf521358f25c21a7673df0a4ebf7b0487fa6ea8a9e6b661de198b019f094a6d9dc495a463723c10927007f07c1d1458690d77a19481ed854d9b9adad27ea81a47674124e1b48e54523d9a138061bf9256cb50b21f7bb6d8a797244803dac9670d00013b3e0a297aa036a59b72716440535e236add4c4fc875320aa113833231e239d9a411c70fe50b5b59ed9d8af88f50be04e180958411c65973fd373bf9159ca872176cb6fa6f65adf97433c75caf606bc7059832a0c2512282f307be290447be73df2f8e53a755e7ad59e811fe302a3eeeca4464260ee78809c2021a5246c0828aed71d0b7fd503843f6384db393448bbe091ffeafa152bb6ab4bbe9336995e56fd30346462b21062218fb1bd0813961baeb433ee0433385950bbf435d77556d03eb045a53539c6380cad87220b9ef7bf8cf23b263c0d28a2a6e3819cb23433ec33d8d10fee6970d3d5a84624544e21e2ce068227368e9eceb60cd</script>
+  <div class="hbe hbe-content">
+    <div class="hbe hbe-input hbe-input-default">
+      <input class="hbe hbe-input-field hbe-input-field-default" type="password" id="hbePass">
+      <label class="hbe hbe-input-label hbe-input-label-default" for="hbePass">
+        <span class="hbe hbe-input-label-content hbe-input-label-content-default">Hey, password is required here.</span>
+      </label>
+    </div>
+  </div>
+</div>
+<script data-pjax src="/lib/hbe.js"></script><link href="/css/hbe.style.css" rel="stylesheet" type="text/css">
+    </div>
+
+    
+    
+    
+
+      <footer class="post-footer">
+          <div class="post-tags">
+              <a href="/tags/%E9%A2%98%E8%A7%A3/" rel="tag"># 题解</a>
+              <a href="/tags/%E6%A0%A1%E5%86%85/" rel="tag"># 校内</a>
+          </div>
+
+        
+
+
+        
+    <div class="post-nav">
+      <div class="post-nav-item">
+    <a href="/2020/04/18/pkuwc2020/" rel="prev" title="PKUWC2020 游记">
+      <i class="fa fa-chevron-left"></i> PKUWC2020 游记
+    </a></div>
+      <div class="post-nav-item">
+    <a href="/2021/03/28/memo/" rel="next" title="memo">
+      memo <i class="fa fa-chevron-right"></i>
+    </a></div>
+    </div>
+      </footer>
+    
+  </article>
+  
+  
+  
+
+
+
+          </div>
+          
+
+<script>
+  window.addEventListener('tabs:register', () => {
+    let { activeClass } = CONFIG.comments;
+    if (CONFIG.comments.storage) {
+      activeClass = localStorage.getItem('comments_active') || activeClass;
+    }
+    if (activeClass) {
+      let activeTab = document.querySelector(`a[href="#comment-${activeClass}"]`);
+      if (activeTab) {
+        activeTab.click();
+      }
+    }
+  });
+  if (CONFIG.comments.storage) {
+    window.addEventListener('tabs:click', event => {
+      if (!event.target.matches('.tabs-comment .tab-content .tab-pane')) return;
+      let commentClass = event.target.classList[1];
+      localStorage.setItem('comments_active', commentClass);
+    });
+  }
+</script>
+
+        </div>
+          
+  
+  <div class="toggle sidebar-toggle">
+    <span class="toggle-line toggle-line-first"></span>
+    <span class="toggle-line toggle-line-middle"></span>
+    <span class="toggle-line toggle-line-last"></span>
+  </div>
+
+  <aside class="sidebar">
+    <div class="sidebar-inner">
+
+      <ul class="sidebar-nav motion-element">
+        <li class="sidebar-nav-toc">
+          文章目录
+        </li>
+        <li class="sidebar-nav-overview">
+          站点概览
+        </li>
+      </ul>
+
+      <!--noindex-->
+      <div class="post-toc-wrap sidebar-panel">
+      </div>
+      <!--/noindex-->
+
+      <div class="site-overview-wrap sidebar-panel">
+        <div class="site-author motion-element" itemprop="author" itemscope itemtype="http://schema.org/Person">
+  <p class="site-author-name" itemprop="name">BeNaive</p>
+  <div class="site-description" itemprop="description"></div>
+</div>
+<div class="site-state-wrap motion-element">
+  <nav class="site-state">
+      <div class="site-state-item site-state-posts">
+          <a href="/archives/">
+        
+          <span class="site-state-item-count">7</span>
+          <span class="site-state-item-name">日志</span>
+        </a>
+      </div>
+      <div class="site-state-item site-state-tags">
+        <span class="site-state-item-count">3</span>
+        <span class="site-state-item-name">标签</span>
+      </div>
+  </nav>
+</div>
+
+
+
+      </div>
+
+    </div>
+  </aside>
+  <div id="sidebar-dimmer"></div>
+
+
+      </div>
+    </main>
+
+    <footer class="footer">
+      <div class="footer-inner">
+        
+
+        
+
+<div class="copyright">
+  
+  &copy; 
+  <span itemprop="copyrightYear">2021</span>
+  <span class="with-love">
+    <i class="fa fa-heart"></i>
+  </span>
+  <span class="author" itemprop="copyrightHolder">BeNaive</span>
+</div>
+  <div class="powered-by">由 <a href="https://hexo.io" class="theme-link" rel="noopener" target="_blank">Hexo</a> & <a href="https://pisces.theme-next.org" class="theme-link" rel="noopener" target="_blank">NexT.Pisces</a> 强力驱动
+  </div>
+
+        
+
+
+
+
+
+
+
+
+      </div>
+    </footer>
+  </div>
+
+  
+  <script src="/lib/anime.min.js"></script>
+  <script src="/lib/velocity/velocity.min.js"></script>
+  <script src="/lib/velocity/velocity.ui.min.js"></script>
+
+<script src="/js/utils.js"></script>
+
+<script src="/js/motion.js"></script>
+
+
+<script src="/js/schemes/pisces.js"></script>
+
+
+<script src="/js/next-boot.js"></script>
+
+
+
+
+  
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  
+
+  
+      
+
+<script>
+  if (typeof MathJax === 'undefined') {
+    window.MathJax = {
+      loader: {
+        source: {
+          '[tex]/amsCd': '[tex]/amscd',
+          '[tex]/AMScd': '[tex]/amscd'
+        }
+      },
+      tex: {
+        inlineMath: {'[+]': [['$', '$']]},
+        tags: 'ams'
+      },
+      options: {
+        renderActions: {
+          findScript: [10, doc => {
+            document.querySelectorAll('script[type^="math/tex"]').forEach(node => {
+              const display = !!node.type.match(/; *mode=display/);
+              const math = new doc.options.MathItem(node.textContent, doc.inputJax[0], display);
+              const text = document.createTextNode('');
+              node.parentNode.replaceChild(text, node);
+              math.start = {node: text, delim: '', n: 0};
+              math.end = {node: text, delim: '', n: 0};
+              doc.math.push(math);
+            });
+          }, '', false],
+          insertedScript: [200, () => {
+            document.querySelectorAll('mjx-container').forEach(node => {
+              let target = node.parentNode;
+              if (target.nodeName.toLowerCase() === 'li') {
+                target.parentNode.classList.add('has-jax');
+              }
+            });
+          }, '', false]
+        }
+      }
+    };
+    (function () {
+      var script = document.createElement('script');
+      script.src = '//cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js';
+      script.defer = true;
+      document.head.appendChild(script);
+    })();
+  } else {
+    MathJax.startup.document.state(0);
+    MathJax.texReset();
+    MathJax.typeset();
+  }
+</script>
+
+    
+
+  
+
+</body>
+</html>
