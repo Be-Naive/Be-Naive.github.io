@@ -22,13 +22,17 @@ cvv：936
 
 portable git:设好PATH，用cmd访问
 
-在 git 里运行 ssh-keygen -t rsa -C "wzm3456789@gmail.com"
+在 git 里运行 `ssh-keygen -t rsa -C "wzm3456789@gmail.com"`
 
 在 github 里添加 key
 
-在 git 里运行 ssh -v git@github.com
+在 git 里运行 `ssh -v git@github.com`
 
-显示hexo:hexo s
+在 git 里 `eval 'ssh-agent `
+
+`ssh-add (id_rsa位置)`
+
+显示hexo:`hexo s`
 
 hexo 目录：/node_modules/.bin
 
