@@ -9,7 +9,6 @@ With collaborators from initially repository:
 - **Ivan.Nginx**: [DIFF highlight](https://github.com/iissnan/hexo-theme-next/pull/1079),
                   [HyperComments](https://github.com/iissnan/hexo-theme-next/pull/1155),
                   [`seo` option](https://github.com/iissnan/hexo-theme-next/pull/1311),
-                  [`{% button %}` tag](https://github.com/iissnan/hexo-theme-next/pull/1328),
                   [VK API](https://github.com/iissnan/hexo-theme-next/pull/1381),
                   [WordCount plugin support](https://github.com/iissnan/hexo-theme-next/pull/1381),
                   [Yandex verification option](https://github.com/iissnan/hexo-theme-next/pull/1381),
