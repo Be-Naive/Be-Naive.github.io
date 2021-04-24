@@ -12,7 +12,6 @@ With collaborators from initially repository:
                   [VK API](https://github.com/iissnan/hexo-theme-next/pull/1381),
                   [WordCount plugin support](https://github.com/iissnan/hexo-theme-next/pull/1381),
                   [Yandex verification option](https://github.com/iissnan/hexo-theme-next/pull/1381),
-                  [`{% exturl %}` tag](https://github.com/iissnan/hexo-theme-next/pull/1438),
                   [`b2t` option](https://github.com/iissnan/hexo-theme-next/pull/1438),
                   [`scrollpercent` option](https://github.com/iissnan/hexo-theme-next/pull/1438),
                   [`save_scroll` option](https://github.com/iissnan/hexo-theme-next/pull/1574),
