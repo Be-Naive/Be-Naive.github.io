@@ -17,8 +17,6 @@ With collaborators from initially repository:
                   [`save_scroll` option](https://github.com/iissnan/hexo-theme-next/pull/1574),
                   [Star rating](https://github.com/iissnan/hexo-theme-next/pull/1649),
                   [`mobile_layout_economy` option](https://github.com/iissnan/hexo-theme-next/pull/1697),
-                  [`{% tabs %}` tag](https://github.com/iissnan/hexo-theme-next/pull/1697),
-                  [`{% label %}` tag](https://github.com/iissnan/hexo-theme-next/pull/1697),
                   [**`Gemini`** scheme](https://github.com/iissnan/hexo-theme-next/pull/1697),
                   [Menu & Sidebar icons in 1 line](https://github.com/iissnan/hexo-theme-next/pull/1830),
                   [Sidebar scrollable](https://github.com/iissnan/hexo-theme-next/pull/1898),
