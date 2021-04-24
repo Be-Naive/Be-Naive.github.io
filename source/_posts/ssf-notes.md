@@ -19,7 +19,7 @@ tags:
 
 偶数位打表可得若 $x$ 位置有 $n$ 张牌：
 
-$\begin{equation}
+$ \begin{equation}
 sg=\left\{
              \begin{array}{lr}
              2, & n \mod x+1=x \\
@@ -27,7 +27,7 @@ sg=\left\{
              0, & (n \mod x+1) \mod 2=0
              \end{array}
 \right.
-\end{equation}$
+\end{equation} $
 
 将各位置异或即可
 
@@ -39,7 +39,7 @@ $\varphi(ij)=\dfrac{\varphi(i)\varphi(j)(i,j)}{\varphi((i,j))}$
 
 $\mu(ij)=\mu(i)\mu(j)[(i,j)=1]$
 
-$d(ij)=\sum_{x|i}\sum_{y|j}[(x,y)=1]$
+$ d(ij)=\sum_{x|i}\sum_{y|j}[(x,y)=1] $
 
 反演，预处理函数后即为三元环计数
 
@@ -97,11 +97,11 @@ $ans\ge 2*(max(W,H)+1)$ ，因此矩形必过其中一条中位线
 
 跳跃后 
 
-$a_i-a_{i-1}=a_{i-1}+a_{i+1}-a_i-a_{i-1}=a_{i+1}-a_i$ ，
+$ a_i-a_{i-1}=a_{i-1}+a_{i+1}-a_i-a_{i-1}=a_{i+1}-a_i  $ ，
 
-$a_{i+1}-a_i=a_{i+1}-a_{i-1}-a_{i+1}+a_i=a_i-a_{i-1}$
+$ a_{i+1}-a_i=a_{i+1}-a_{i-1}-a_{i+1}+a_i=a_i-a_{i-1} $
 
-即交换了 $a_i-a_{i-1}$ 与 $a_{i+1}-a_i$
+即交换了 $ a_i-a_{i-1} $ 与 $ a_{i+1}-a_i $
 
 因此倍增即可
 
@@ -135,7 +135,7 @@ $当i,d1,d2所含质因数集合相同且d1与d2均无平方因子时有贡献$
 
 此时 $d1=d2$ ，$\mu(d1)*\mu(d2)=1$ ， 贡献为 $f(d2)$ ，可矩阵快速幂求
 
-$i$ 的选法有 $\prod_{p_j|d2} a_j$ 种，因此总贡献为 $f(d2)*\prod_{p_j|d2} a_j$
+$i$ 的选法有 $ \prod_{p_j|d2} a_j $ 种，因此总贡献为 $f(d2)*\prod_{p_j|d2} a_j$
 
 ### C(win)
 
