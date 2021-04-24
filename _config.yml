@@ -102,5 +102,8 @@ theme: next
 ## Docs: https://hexo.io/docs/one-command-deployment
 deploy:
   type: git
-  repo: git@github.com:Benaive05/benaive05.github.io.git
+  repo: git@github.com:Be-Naive/Be-Naive.github.io.git
   branch: master
+
+include:
+  - .nojekyll
