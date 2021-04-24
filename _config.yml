@@ -104,6 +104,3 @@ deploy:
   type: git
   repo: git@github.com:Be-Naive/Be-Naive.github.io.git
   branch: master
-
-include:
-  - .nojekyll
