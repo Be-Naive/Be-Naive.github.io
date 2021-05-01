@@ -1,6 +1,6 @@
 ---
 title: ssf notes
-description: 首师附集训笔记
+description: 首师附集训笔记（咕咕咕）
 mathjax: true
 date: 2021-04-20 17:14:28
 updated: 2021-04-24 20:14:11
@@ -254,3 +254,4 @@ $n=2$ 时限制失效，需特判
 ### C(dog)
 
 ## 4.24
+
