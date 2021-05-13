@@ -104,3 +104,8 @@ deploy:
   type: git
   repo: git@github.com:Benaive05/benaive05.github.io.git
   branch: master
+# hexo-hide-posts
+hide_posts:
+  filter: hidden
+  public_generators: []
+  noindex: true
