@@ -1,5 +1,5 @@
 ---
-title: puuz notes
+title: pyyz notes
 description: 平邑一中集训笔记
 mathjax: true
 date: 2021-06-12 20:14:28
