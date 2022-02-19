@@ -80,7 +80,11 @@
   </style>
 </noscript>
 
-</head>
+<!-- hexo injector head_end start -->
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.12.0/dist/katex.min.css">
+
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/hexo-math@4.0.0/dist/style.css">
+<!-- hexo injector head_end end --></head>
 
 <body itemscope itemtype="http://schema.org/WebPage">
   <div class="container use-motion">
@@ -193,40 +197,53 @@
     <div class="post-body" itemprop="articleBody">
 
       
-        <h2 id="Day-n"><a href="#Day-n" class="headerlink" title="Day -n"></a>Day -n</h2><p>lky：wzm，我好慌怎么办</p>
+        <h2 id="day--n">Day -n</h2>
+<p>lky：wzm，我好慌怎么办</p>
 <p>我（指着fivethirtyeight的预测）：你看NBA第七进前八的概率都有97%，你现在rk12进队的概率至少97%</p>
 <p>（FLAG高高挂）</p>
-<h2 id="Day-0"><a href="#Day-0" class="headerlink" title="Day 0"></a>Day 0</h2><p>因为一些问题要去医院检查所以前一天就跑路了</p>
+<h2 id="day-0">Day 0</h2>
+<p>因为一些问题要去医院检查所以前一天就跑路了</p>
 <p>在医院检查完就出发去临沂了 路上想敲板子结果颓掉了</p>
 <p>刚到酒店房间就遇到警察来治安检查<del>扫黑除恶</del></p>
 <p>去试机之前和sun在酒店门口听到有人说“你看hyw现在排名这么高，你们俩肯定打不过”（<del>“你们俩”一定指我和我</del>）</p>
 <p>路上随口奶了一句“我这次应该希望榜乱一些，榜越乱对我越有利”</p>
 <p>试机发现位置实在是有点小，比较难受</p>
-<h2 id="Day-1"><a href="#Day-1" class="headerlink" title="Day 1"></a>Day 1</h2><p>进场前发现min25之类的都不会，有亿点慌</p>
+<h2 id="day-1">Day 1</h2>
+<p>进场前发现min25之类的都不会，有亿点慌</p>
 <p>看题发现A好像是简单数据结构，B是看起来像原题可惜我不会的构造，C完全不会</p>
 <p>先去开A，推了下结论发现两排一起sort之后双指针就好了</p>
 <p>sort的log肯定没法去，我选择相信CCF少爷机，9点多拍上扔了</p>
 <p>去推B，感觉外面一圈每相邻两个之和都能推范围的话随便构造一下就好了</p>
 <p>然后就发现它锅了，还要有更多限制</p>
 <p>推了一波感觉是差分约束，列了下式子发现有些约束是和有些是差，好像没法做</p>
-<p>心态小崩，还剩2h先去看C了，发现直接 $n$ 张图tarjan可能是 $n^2m$ 或者 $nm^2$ 的，可能能冲过去44</p>
+<p>心态小崩，还剩2h先去看C了，发现直接 <span
+class="math inline">\(n\)</span> 张图tarjan可能是 <span
+class="math inline">\(n^2m\)</span> 或者 <span
+class="math inline">\(nm^2\)</span> 的，可能能冲过去44</p>
 <p>开写，用了50min左右调过大样例就扔那里了</p>
 <p>还剩不到1.5h了，算了一下自己怎么都上不了200，突然就很慌，去厕所冷静了下</p>
-<p>回来看B，发现还是什么都推不出来，只好跑去写 $m=2$ 和 $n,m\le3$ 了</p>
-<p>$m=2$ 很快写出来，但是 $n,m\le3$ 各种挂，调了很久才过了手造小数据（怎么不给个大样例啊）</p>
+<p>回来看B，发现还是什么都推不出来，只好跑去写 <span
+class="math inline">\(m=2\)</span> 和 <span
+class="math inline">\(n,m\le3\)</span> 了</p>
+<p><span class="math inline">\(m=2\)</span> 很快写出来，但是 <span
+class="math inline">\(n,m\le3\)</span>
+各种挂，调了很久才过了手造小数据（怎么不给个大样例啊）</p>
 <p>还剩30min左右，看了下A没拍出锅，造了组1e6的数据跑了下，发现跑了0.96~0.98s，就有点虚</p>
 <p>不过看了看没有任何能卡常的地方（<del>fread是一定不会写的</del>），就只能不管它了，去检查文件名</p>
-<p>检查完还剩15min左右，突然想去冲一波B的 $a_{i,j}\le1$ </p>
+<p>检查完还剩15min左右，突然想去冲一波B的 <span
+class="math inline">\(a_{i,j}\le1\)</span></p>
 <p>乱搞了一个解法，在结束前3min过了编译</p>
 <p>1min后，随手造了组数据就发现它锅了</p>
 <p>这时候我突发奇想，把这一段所有的相邻两个和取最小改成取最大，发现过了刚才两组数据，不过肯定还是锅的</p>
 <p>不过还是把它放到了B剩下的所有部分分上，然后把它交了上去，弄好的时候只剩下不到1min了</p>
 <p>那时我还不知道，在这最后几分钟内乱写的东西会带来多么魔幻的事情</p>
-<p>估分 $100+50+44=194$</p>
+<p>估分 <span class="math inline">\(100+50+44=194\)</span></p>
 <p>出来发现sun好像有点不太好，hyw还是很稳，Rainair好像还行</p>
 <p>lky自称OI生涯结束了并一直坚称A题挂没，我表示无法理解，不过他下午的确很自闭qwq</p>
 <p>感觉考完心力交瘁，就一直在颓也没怎么复习</p>
-<h2 id="Day-2"><a href="#Day-2" class="headerlink" title="Day 2"></a>Day 2</h2><h3 id="场上"><a href="#场上" class="headerlink" title="场上"></a>场上</h3><p>吃早饭时候突然想起昨天没开Wall，就随口和sun说了一句</p>
+<h2 id="day-2">Day 2</h2>
+<h3 id="场上">场上</h3>
+<p>吃早饭时候突然想起昨天没开Wall，就随口和sun说了一句</p>
 <p>看压缩包看到有道题输入很短，感觉有计数也不是很好</p>
 <p>开题发现A还是简单数据结构，C还是有向图，B是个状压，好像AB都比较可做</p>
 <p>想了下A，感觉二分+倍增应该可以2log，还是好写的</p>
@@ -237,55 +254,74 @@
 <p>当时以为时限1s，就很慌，想自己造极限数据发现造不过大样例/px</p>
 <p>只能放那里去开B了，结果B我读错题了。。。把排列数读成划分数了/px</p>
 <p>想了很久状压又打了个暴力才发现读错题了。。。然后发现原来暴力有60</p>
-<p>继续想状压，发现我只会 $2^n<em>n</em>m^2$ 的，一算这个比阶乘都慢/px</p>
-<p>后来发现有一维可以变成 $\frac{m}{popcnt(i)}$ ，不过算了一下还是过不了任何&gt;60的分</p>
+<p>继续想状压，发现我只会 <span class="math inline">\(2^n*n*m^2\)</span>
+的，一算这个比阶乘都慢/px</p>
+<p>后来发现有一维可以变成 <span
+class="math inline">\(\frac{m}{popcnt(i)}\)</span>
+，不过算了一下还是过不了任何&gt;60的分</p>
 <p>没办法只能把阶乘扔在那溜了</p>
 <p>这时候回头看了看A，突然发现时限2s。。。那没事了</p>
 <p>去看C发现暴力30和树15应该很好写，就先把这些写掉了，这时候大概11:30多点</p>
 <p>然后试图去写一种奇怪的bitset，直到终场什么都没写出来。。。在3h之后一分不得/px</p>
-<p>估分 $100+60+45=205$</p>
-<p>出来hyw说C的bitset拍不过…那还好，不过lsq写了个神仙spfa算法好像能过Orz</p>
-<p>sun说B可以差分就是 $2^n<em>n^2</em>m$ 了。。。还是菜了</p>
+<p>估分 <span class="math inline">\(100+60+45=205\)</span></p>
+<p>出来hyw说C的bitset拍不过...那还好，不过lsq写了个神仙spfa算法好像能过Orz</p>
+<p>sun说B可以差分就是 <span class="math inline">\(2^n*n^2*m\)</span>
+了。。。还是菜了</p>
 <p>lky这次可能真的挂了。。。写了3h的A结果假了。。。</p>
-<h3 id="当晚"><a href="#当晚" class="headerlink" title="当晚"></a>当晚</h3><p>回到青岛，代码发了</p>
+<h3 id="当晚">当晚</h3>
+<p>回到青岛，代码发了</p>
 <p>在洛谷上发现有人造了民间数据，就去测了一下</p>
-<p>一开始只有d1t1和d2t1，结果lky d1t1&amp;d2t1真的挂了，fqt这题也挂了，hyw和lsq d1t1挂了，感觉到了一丝诡异</p>
-<p>后来六题民间数据都出来了，我一测，d1t2是个55？？？前20挂了，乱写的 $a_{i,j}\le1$ 那档过了？？？</p>
+<p>一开始只有d1t1和d2t1，结果lky
+d1t1&amp;d2t1真的挂了，fqt这题也挂了，hyw和lsq
+d1t1挂了，感觉到了一丝诡异</p>
+<p>后来六题民间数据都出来了，我一测，d1t2是个55？？？前20挂了，乱写的
+<span class="math inline">\(a_{i,j}\le1\)</span> 那档过了？？？</p>
 <p>找到我代码仔细一看：</p>
-<p><img src="https://benaive.xyz/images/sdoi2021d1t2.png" alt=""></p>
-<p>我能说什么好呢。。。后来又发现我没判 $m=3,n=2$ 。。。</p>
+<p><img src="https://benaive.xyz/images/sdoi2021d1t2.png" /></p>
+<p>我能说什么好呢。。。后来又发现我没判 <span
+class="math inline">\(m=3,n=2\)</span> 。。。</p>
 <p>这时候上QQ看了看，得到了一个又一个震惊的消息：</p>
 <p>hyw的d1t2忘删调试，挂没了</p>
 <p>lky的d1t2挂没了</p>
 <p>Rainair的d1t1把fread写挂了，只能读一次，挂成了40</p>
 <p>sun在d2t2用%d输出了long long，视系统而定可能挂到80甚至挂没？？？</p>
 <p>那晚的QQ里，是这样句式的重复：</p>
-<p><img src="https://benaive.xyz/images/411night.png" alt=""></p>
+<p><img src="https://benaive.xyz/images/411night.png" /></p>
 <p>从未见过，这般的挂题大赛。。。</p>
 <p>等等，我是不是说过，榜越乱对我越有利？？？</p>
 <p>我是不是还在第二天早晨，说了一句开Wall？？？</p>
 <p>怎么回事啊。。。吓傻了</p>
-<h2 id="Day-3"><a href="#Day-3" class="headerlink" title="Day 3"></a>Day 3</h2><p>民间榜出来了，lky可能是真的无了…</p>
-<p>真的是太惨了啊，5年OI历程却是这样的终结…有点伤感</p>
+<h2 id="day-3">Day 3</h2>
+<p>民间榜出来了，lky可能是真的无了...</p>
+<p>真的是太惨了啊，5年OI历程却是这样的终结...有点伤感</p>
 <p>sun还是稳A队，Rainair和sqy应该翻回来了</p>
 <p>我好像也翻盘了？？有点神奇</p>
 <p>这天下午，突然发现一件事情：</p>
-<p>我的d1t2 $a_{i,j}\le1$ 那一档，好像是一个 $n,m$ 越小越容易挂的假做法。。。</p>
-<p>当 $n\ge10$ 时，这个算法几乎不可能出错，所以在各大民间数据中，这道题一直有 $\ge55$ 的分数</p>
+<p>我的d1t2 <span class="math inline">\(a_{i,j}\le1\)</span>
+那一档，好像是一个 <span class="math inline">\(n,m\)</span>
+越小越容易挂的假做法。。。</p>
+<p>当 <span class="math inline">\(n\ge10\)</span>
+时，这个算法几乎不可能出错，所以在各大民间数据中，这道题一直有 <span
+class="math inline">\(\ge55\)</span> 的分数</p>
 <p>所以，我在结束前最后3分钟所改的那个地方，可能让我成为了唯一的挂分为负选手？？</p>
 <p>魔幻。。。。。</p>
-<p>某份通知里的24小时内出成绩没能兑现，新的官方成绩时间定在4.14 10:00</p>
-<h2 id="Day-4"><a href="#Day-4" class="headerlink" title="Day 4"></a>Day 4</h2><p>没有出成绩。</p>
+<p>某份通知里的24小时内出成绩没能兑现，新的官方成绩时间定在4.14
+10:00</p>
+<h2 id="day-4">Day 4</h2>
+<p>没有出成绩。</p>
 <p>原来d1t2的差分约束就是选所有奇数位的变量取相反数，然后就只有差了/px</p>
-<p>造了组数据把我的d1t3卡成 $nm^2$ ，发现44pts可能拿不到了</p>
+<p>造了组数据把我的d1t3卡成 <span class="math inline">\(nm^2\)</span>
+，发现44pts可能拿不到了</p>
 <p>于是，我命运可能更加寄托在了d1t2的那25分上。。。</p>
-<h2 id="Day-5"><a href="#Day-5" class="headerlink" title="Day 5"></a>Day 5</h2><p>10:00过去了，没有出成绩<del>，只有鸽子破壳</del></p>
-<h2 id="Day-6"><a href="#Day-6" class="headerlink" title="Day 6"></a>Day 6</h2><p>官方榜出了，我的d1t1被卡常变成90，但d1t2非常令人无语的变成了75，其他题符合预期</p>
+<h2 id="day-5">Day 5</h2>
+<p>10:00过去了，没有出成绩<del>，只有鸽子破壳</del></p>
+<h2 id="day-6">Day 6</h2>
+<p>官方榜出了，我的d1t1被卡常变成90，但d1t2非常令人无语的变成了75，其他题符合预期</p>
 <p>但这并没有改变任何人的命运，退役的人们仍旧没能留下</p>
 <p>不过fqt写挂了d2t3的树然后拿到了队线外第一名？？？怎么回事啊</p>
 <blockquote>
-<p>동-지는 간데없고 깃-발만 나부껴<br>同志已经离去 只留下旗帜在飘扬</p>
-<p>​                                                        ——《光州之歌（献给你的进行曲）》</p>
+<p>동-지는 간데없고 깃-발만 나부껴 同志已经离去 只留下旗帜在飘扬</p>
+<p>​ ——《光州之歌（献给你的进行曲）》</p>
 </blockquote>
 <p>不过对我来说，这个赛季的厄运，是终于结束了呢。</p>
 
@@ -371,7 +407,7 @@
 
       <!--noindex-->
       <div class="post-toc-wrap sidebar-panel">
-          <div class="post-toc motion-element"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#Day-n"><span class="nav-number">1.</span> <span class="nav-text">Day -n</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#Day-0"><span class="nav-number">2.</span> <span class="nav-text">Day 0</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#Day-1"><span class="nav-number">3.</span> <span class="nav-text">Day 1</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#Day-2"><span class="nav-number">4.</span> <span class="nav-text">Day 2</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#%E5%9C%BA%E4%B8%8A"><span class="nav-number">4.1.</span> <span class="nav-text">场上</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E5%BD%93%E6%99%9A"><span class="nav-number">4.2.</span> <span class="nav-text">当晚</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#Day-3"><span class="nav-number">5.</span> <span class="nav-text">Day 3</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#Day-4"><span class="nav-number">6.</span> <span class="nav-text">Day 4</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#Day-5"><span class="nav-number">7.</span> <span class="nav-text">Day 5</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#Day-6"><span class="nav-number">8.</span> <span class="nav-text">Day 6</span></a></li></ol></div>
+          <div class="post-toc motion-element"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#day--n"><span class="nav-number">1.</span> <span class="nav-text">Day -n</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#day-0"><span class="nav-number">2.</span> <span class="nav-text">Day 0</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#day-1"><span class="nav-number">3.</span> <span class="nav-text">Day 1</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#day-2"><span class="nav-number">4.</span> <span class="nav-text">Day 2</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#%E5%9C%BA%E4%B8%8A"><span class="nav-number">4.1.</span> <span class="nav-text">场上</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E5%BD%93%E6%99%9A"><span class="nav-number">4.2.</span> <span class="nav-text">当晚</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#day-3"><span class="nav-number">5.</span> <span class="nav-text">Day 3</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#day-4"><span class="nav-number">6.</span> <span class="nav-text">Day 4</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#day-5"><span class="nav-number">7.</span> <span class="nav-text">Day 5</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#day-6"><span class="nav-number">8.</span> <span class="nav-text">Day 6</span></a></li></ol></div>
       </div>
       <!--/noindex-->
 
