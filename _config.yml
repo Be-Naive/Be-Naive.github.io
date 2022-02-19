@@ -109,3 +109,6 @@ hide_posts:
   filter: hidden
   public_generators: []
   noindex: true
+markdown:
+  plugins:
+    - hexo-math
