@@ -11,7 +11,7 @@ tags: 题解
 
 ## NEERC 17 K
 
-[link][https://codeforces.com/gym/101630/problem/K]
+[link](https://codeforces.com/gym/101630/problem/K)
 
 ### 题意
 
@@ -36,4 +36,6 @@ tags: 题解
 但 $2^k\mid a_1$ ，$a_1\leq 2^{64-n}$ ，因此枚举 $a_1$ 仅需枚举 $2^{64-n-k}$ 次，总复杂度仍为 $O(2^{64-n})$
 
 以 $42$ 为阈值分治两种算法，即可通过此题
+
+[code](https://codeforces.com/gym/101630/submission/147269919)
 
