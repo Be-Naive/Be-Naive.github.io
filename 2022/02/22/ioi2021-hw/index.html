@@ -183,6 +183,13 @@
             </span>
 
           
+            <span id="/2022/02/22/ioi2021-hw/" class="post-meta-item leancloud_visitors" data-flag-title="IOI2021集训队作业乱做" title="阅读次数">
+              <span class="post-meta-item-icon">
+                <i class="fa fa-eye"></i>
+              </span>
+              <span class="post-meta-item-text">阅读次数：</span>
+              <span class="leancloud-visitors-count"></span>
+            </span>
             <div class="post-description">即将鸽掉的东西</div>
 
         </div>
@@ -248,6 +255,50 @@ class="math inline">\(k\)</span> 条线段，使用最少的线段覆盖环。</
 class="math inline">\(i\)</span>
 之前有线段覆盖的点能到达的最远点，注意一些 <span
 class="math inline">\(\pm1\)</span> 的细节</p>
+<h2 id="wf2019-b">WF2019 B</h2>
+<p><a target="_blank" rel="noopener" href="https://codeforces.com/gym/102511/problem/B">link</a></p>
+<h3 id="题意-2">题意</h3>
+<p>你要修一座拱桥。桥面的高度为 <span class="math inline">\(h\)</span>
+。给定 <span class="math inline">\(n\)</span> 个地形坐标 <span
+class="math inline">\((x_1,y_1),(x_2,y_2),\dots,(x_n,y_n)\)</span>
+，将其相邻连接就是地面。</p>
+<p>你需要修若干条柱子，只能在给定的点对应的横坐标处修，在第 <span
+class="math inline">\(i\)</span> 个点处修的柱子的高度为 <span
+class="math inline">\(h−x——i\)</span> 。第 <span
+class="math inline">\(1\)</span> 个和第 <span
+class="math inline">\(n\)</span> 个点处必须修柱子。</p>
+<p>你还需要在修的柱子之间造拱，拱是一个半圆形，直径为两个柱子的距离，恰好和桥面相切。</p>
+<p>拱不能和地面相交，可以相切。</p>
+<p>假设你修了 <span class="math inline">\(k\)</span> 条柱子，高度为
+<span class="math inline">\(h_1,h_2,\dots,h_k\)</span> ，修了 <span
+class="math inline">\(k-1\)</span> 个拱，直径为 <span
+class="math inline">\(d_1,d_2,\dots,d_{k−1}\)</span> 。</p>
+<p>给定参数 <span class="math inline">\(\alpha,\beta\)</span>
+，要求最小化代价： <span
+class="math inline">\(\alpha*\sum\limits_{i=1}^k{h_i}+\beta*\sum\limits_{i=1}^{k-1}{(h_{i+1}-h_i)^2}\)</span></p>
+<p>无合法方案输出 <code>impossible</code> 。 <span
+class="math inline">\(n\leq 10^4\)</span> 。</p>
+<h3 id="题解-2">题解</h3>
+<p>显然可以DP，需要做到 <span class="math inline">\(O(1)\)</span>
+的判断一段区间内的点是否都在某个圆内。</p>
+<p>设现在我们由 <span class="math inline">\(f_i\)</span>
+向后转移，新的拱半径为 <span class="math inline">\(r\)</span>
+，则新的拱圆心为 <span class="math inline">\((x_i+r,h-r)\)</span>。</p>
+<p>这样一个点 <span class="math inline">\((x_j,y_j)\)</span>
+在圆内的条件为 <span class="math inline">\((x_j-x_i-r)^2+(y_j-h+r)^2\leq
+r^2\)</span></p>
+<p>整理得 <span
+class="math inline">\(r^2-2(x_i-x_j+y_j-h)r+(x_i-x_j)^2+(y_j-h)^2\leq
+0\)</span></p>
+<p>可以解得 <span class="math inline">\(r_1\leq r\leq r_2\)</span>
+。</p>
+<p>因为拱是一个半圆，所以当 <span class="math inline">\(y_j\leq
+h-r_1\)</span> 时只需要 <span class="math inline">\(r\leq r2\)</span>
+。</p>
+<p>枚举 <span class="math inline">\(j\)</span> 时维护 <span
+class="math inline">\(r\)</span> 的范围即可。</p>
+<p><a
+target="_blank" rel="noopener" href="https://codeforces.com/gym/102511/submission/147766018">code</a></p>
 
     </div>
 
@@ -331,7 +382,7 @@ class="math inline">\(\pm1\)</span> 的细节</p>
 
       <!--noindex-->
       <div class="post-toc-wrap sidebar-panel">
-          <div class="post-toc motion-element"><ol class="nav"><li class="nav-item nav-level-3"><a class="nav-link" href="#%E5%A4%A7%E6%A6%82%E4%B8%A4%E4%B8%AA%E5%91%A8%E4%B9%8B%E5%90%8E%E5%B0%B1%E4%BC%9A%E9%B8%BD%E4%BA%86%E7%9C%8B%E7%9C%8B%E9%B8%BD%E4%B9%8B%E5%89%8D%E8%83%BD%E5%81%9A%E5%A4%9A%E5%B0%91%E5%90%A7"><span class="nav-number">1.</span> <span class="nav-text">大概两个周之后就会鸽了。。。看看鸽之前能做多少吧</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#neerc-17-k"><span class="nav-number"></span> <span class="nav-text">NEERC 17 K</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#%E9%A2%98%E6%84%8F"><span class="nav-number">1.</span> <span class="nav-text">题意</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E9%A2%98%E8%A7%A3"><span class="nav-number">2.</span> <span class="nav-text">题解</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#wf2014-k"><span class="nav-number"></span> <span class="nav-text">WF2014 K</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#%E9%A2%98%E6%84%8F-1"><span class="nav-number">1.</span> <span class="nav-text">题意</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E9%A2%98%E8%A7%A3-1"><span class="nav-number">2.</span> <span class="nav-text">题解</span></a></li></ol></div>
+          <div class="post-toc motion-element"><ol class="nav"><li class="nav-item nav-level-3"><a class="nav-link" href="#%E5%A4%A7%E6%A6%82%E4%B8%A4%E4%B8%AA%E5%91%A8%E4%B9%8B%E5%90%8E%E5%B0%B1%E4%BC%9A%E9%B8%BD%E4%BA%86%E7%9C%8B%E7%9C%8B%E9%B8%BD%E4%B9%8B%E5%89%8D%E8%83%BD%E5%81%9A%E5%A4%9A%E5%B0%91%E5%90%A7"><span class="nav-number">1.</span> <span class="nav-text">大概两个周之后就会鸽了。。。看看鸽之前能做多少吧</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#neerc-17-k"><span class="nav-number"></span> <span class="nav-text">NEERC 17 K</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#%E9%A2%98%E6%84%8F"><span class="nav-number">1.</span> <span class="nav-text">题意</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E9%A2%98%E8%A7%A3"><span class="nav-number">2.</span> <span class="nav-text">题解</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#wf2014-k"><span class="nav-number"></span> <span class="nav-text">WF2014 K</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#%E9%A2%98%E6%84%8F-1"><span class="nav-number">1.</span> <span class="nav-text">题意</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E9%A2%98%E8%A7%A3-1"><span class="nav-number">2.</span> <span class="nav-text">题解</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#wf2019-b"><span class="nav-number"></span> <span class="nav-text">WF2019 B</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#%E9%A2%98%E6%84%8F-2"><span class="nav-number">1.</span> <span class="nav-text">题意</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E9%A2%98%E8%A7%A3-2"><span class="nav-number">2.</span> <span class="nav-text">题解</span></a></li></ol></div>
       </div>
       <!--/noindex-->
 
@@ -393,6 +444,92 @@ class="math inline">\(\pm1\)</span> 的细节</p>
 
 
 
+<script>
+  (function() {
+    function leancloudSelector(url) {
+      url = encodeURI(url);
+      return document.getElementById(url).querySelector('.leancloud-visitors-count');
+    }
+
+    function addCount(Counter) {
+      var visitors = document.querySelector('.leancloud_visitors');
+      var url = decodeURI(visitors.id);
+      var title = visitors.dataset.flagTitle;
+
+      Counter('get', '/classes/Counter?where=' + encodeURIComponent(JSON.stringify({ url })))
+        .then(response => response.json())
+        .then(({ results }) => {
+          if (results.length > 0) {
+            var counter = results[0];
+            leancloudSelector(url).innerText = counter.time + 1;
+            Counter('put', '/classes/Counter/' + counter.objectId, { time: { '__op': 'Increment', 'amount': 1 } })
+              .catch(error => {
+                console.error('Failed to save visitor count', error);
+              });
+          } else {
+              leancloudSelector(url).innerText = 'Counter not initialized! More info at console err msg.';
+              console.error('ATTENTION! LeanCloud counter has security bug, see how to solve it here: https://github.com/theme-next/hexo-leancloud-counter-security. \n However, you can still use LeanCloud without security, by setting `security` option to `false`.');
+            
+          }
+        })
+        .catch(error => {
+          console.error('LeanCloud Counter Error', error);
+        });
+    }
+
+    function showTime(Counter) {
+      var visitors = document.querySelectorAll('.leancloud_visitors');
+      var entries = [...visitors].map(element => {
+        return decodeURI(element.id);
+      });
+
+      Counter('get', '/classes/Counter?where=' + encodeURIComponent(JSON.stringify({ url: { '$in': entries } })))
+        .then(response => response.json())
+        .then(({ results }) => {
+          for (let url of entries) {
+            let target = results.find(item => item.url === url);
+            leancloudSelector(url).innerText = target ? target.time : 0;
+          }
+        })
+        .catch(error => {
+          console.error('LeanCloud Counter Error', error);
+        });
+    }
+
+    let { app_id, app_key, server_url } = {"enable":true,"app_id":"0tEvrbyk0hBS1PmUC1K3Bjps-gzGzoHsz","app_key":"JcuekQRIbOMzDgbMWrOVgHcC","server_url":null,"security":true};
+    function fetchData(api_server) {
+      var Counter = (method, url, data) => {
+        return fetch(`${api_server}/1.1${url}`, {
+          method,
+          headers: {
+            'X-LC-Id'     : app_id,
+            'X-LC-Key'    : app_key,
+            'Content-Type': 'application/json',
+          },
+          body: JSON.stringify(data)
+        });
+      };
+      if (CONFIG.page.isPost) {
+        if (CONFIG.hostname !== location.hostname) return;
+        addCount(Counter);
+      } else if (document.querySelectorAll('.post-title-link').length >= 1) {
+        showTime(Counter);
+      }
+    }
+
+    let api_server = app_id.slice(-9) !== '-MdYXbMMI' ? server_url : `https://${app_id.slice(0, 8).toLowerCase()}.api.lncldglobal.com`;
+
+    if (api_server) {
+      fetchData(api_server);
+    } else {
+      fetch('https://app-router.leancloud.cn/2/route?appId=' + app_id)
+        .then(response => response.json())
+        .then(({ api_server }) => {
+          fetchData('https://' + api_server);
+        });
+    }
+  })();
+</script>
 
 
       </div>
