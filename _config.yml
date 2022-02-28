@@ -107,7 +107,7 @@ deploy:
 # hexo-hide-posts
 hide_posts:
   filter: hidden
-  public_generators: []
+  public_generators: [archives]
   noindex: true
 markdown:
   plugins:
