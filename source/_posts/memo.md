@@ -18,6 +18,40 @@ date：03/27
 
 cvv：936
 
+## mastercard world
+
+5332280800098754
+
+date：03/28
+
+cvv:527
+
+# vps
+
+## gce hk
+
+35.220.226.127
+
+BncgTS2Q5aq$xj!7@2Z#
+
+## gce tw
+
+35.221.204.5
+
+6TufqiP6zvVzxvC$Ge9R
+
+## cc 9.5
+
+198.52.97.174
+
+1ilMLVy3kw
+
+## vir sj
+
+107.172.102.188
+
+EhXX2BeUxZg531u8x3
+
 # git config
 
 portable git:设好PATH，用cmd访问
