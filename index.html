@@ -345,6 +345,270 @@
   
   
   <article itemscope itemtype="http://schema.org/Article" class="post-block" lang="zh-CN">
+    <link itemprop="mainEntityOfPage" href="http://example.com/2022/02/22/ioi2021-hw/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="image" content="/images/avatar.gif">
+      <meta itemprop="name" content="BeNaive">
+      <meta itemprop="description" content="">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="BeNaive">
+    </span>
+      <header class="post-header">
+        <h2 class="post-title" itemprop="name headline">
+          
+            <a href="/2022/02/22/ioi2021-hw/" class="post-title-link" itemprop="url">IOI2021集训队作业乱做</a>
+        </h2>
+
+        <div class="post-meta">
+            <span class="post-meta-item">
+              <span class="post-meta-item-icon">
+                <i class="far fa-calendar"></i>
+              </span>
+              <span class="post-meta-item-text">发表于</span>
+
+              <time title="创建时间：2022-02-22 21:07:07" itemprop="dateCreated datePublished" datetime="2022-02-22T21:07:07+08:00">2022-02-22</time>
+            </span>
+              <span class="post-meta-item">
+                <span class="post-meta-item-icon">
+                  <i class="far fa-calendar-check"></i>
+                </span>
+                <span class="post-meta-item-text">更新于</span>
+                <time title="修改时间：2022-02-28 11:06:41" itemprop="dateModified" datetime="2022-02-28T11:06:41+08:00">2022-02-28</time>
+              </span>
+
+          
+
+        </div>
+      </header>
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+          <h2 id="neerc-17-k">NEERC 17 K</h2>
+<p><a target="_blank" rel="noopener" href="https://codeforces.com/gym/101630/problem/K">link</a></p>
+<h3 id="题意">题意</h3>
+<p>有一个序列 <span class="math inline">\(\{a[i]\}\)</span> ，满足 <span
+class="math inline">\(\sum\limits_{j=1}^{i-1}a_j&lt;a_i\)</span> ，
+<span class="math inline">\(\sum{a_i}&lt;2^{64}\)</span> ，以及一个奇数
+<span class="math inline">\(r\)</span></p>
+<p>现在给出序列 <span class="math inline">\(\{b[i]\}\)</span> ，其中
+<span class="math inline">\(b[i]=a[i]*r\ mod\ 2^{64}\)</span></p>
+<p>再给出一个整数 <span class="math inline">\(s\)</span> ，求一些 <span
+class="math inline">\(b_i\)</span> 使其和 mod <span
+class="math inline">\(2^{64}\)</span> 为 <span
+class="math inline">\(s\)</span></p>
+<p>保证有解</p>
+<p><span class="math inline">\(1\leq n \leq 64\)</span> ， <span
+class="math inline">\(1\leq b_i,r\leq 2^{64}\)</span></p>
+<h3 id="题解">题解</h3>
+<p>一种方法是 meet in the middle ，复杂度为 <span
+class="math inline">\(O(2^{\frac{n}{2}})\)</span></p>
+<p>另一种方法是枚举 <span class="math inline">\(a_1\)</span> ，解出
+<span class="math inline">\(r\)</span></p>
+<p>由题意得 <span class="math inline">\(a_i&gt;2a_{i-1}\)</span> ，因此
+<span class="math inline">\(a_1\leq2^{64-n}\)</span></p>
+<p>又因为 <span class="math inline">\(2\nmid r\)</span> ， <span
+class="math inline">\(a_1\)</span> 与 <span
+class="math inline">\(b_1\)</span> 的 lowbit 应当相同，设为 <span
+class="math inline">\(k\)</span></p>
+<p>则只能解出 <span class="math inline">\(mod\ 2^{64-k}\)</span>
+意义下的 <span class="math inline">\(r\)</span> ，还需要枚举前 <span
+class="math inline">\(k\)</span> 位</p>
+<p>但 <span class="math inline">\(2^k\mid a_1\)</span> ，<span
+class="math inline">\(a_1\leq 2^{64-n}\)</span> ，因此枚举 <span
+class="math inline">\(a_1\)</span> 仅需枚举 <span
+class="math inline">\(2^{64-n-k}\)</span> 次，总复杂度仍为 <span
+class="math inline">\(O(2^{64-n})\)</span></p>
+<p>解 <span class="math inline">\(r\)</span> 时直接推 <span
+class="math inline">\(mod\ 2^k\)</span> 意义下的逆元，不要用exgcd</p>
+<p>以 <span class="math inline">\(42\)</span>
+为阈值分治两种算法，即可通过此题</p>
+<p><a
+target="_blank" rel="noopener" href="https://codeforces.com/gym/101630/submission/147269919">code</a></p>
+<h2 id="wf2014-k">WF2014 K</h2>
+<p><a target="_blank" rel="noopener" href="https://codeforces.com/gym/101221/problem/K">link</a></p>
+<h3 id="题意-1">题意</h3>
+<p>给定一个大小为 <span class="math inline">\(n\)</span> 的环和 <span
+class="math inline">\(k\)</span> 条线段，使用最少的线段覆盖环。</p>
+<p><span class="math inline">\(n,k\leq 10^6\)</span></p>
+<h3 id="题解-1">题解</h3>
+<p>直接倍增，令 <span class="math inline">\(f[i][j]\)</span> 为 <span
+class="math inline">\(i\)</span>
+之前有线段覆盖的点能到达的最远点，注意一些 <span
+class="math inline">\(\pm1\)</span> 的细节</p>
+<h2 id="wf2019-b">WF2019 B</h2>
+<p><a target="_blank" rel="noopener" href="https://codeforces.com/gym/102511/problem/B">link</a></p>
+<h3 id="题意-2">题意</h3>
+<p>你要修一座拱桥。桥面的高度为 <span class="math inline">\(h\)</span>
+。给定 <span class="math inline">\(n\)</span> 个地形坐标 <span
+class="math inline">\((x_1,y_1),(x_2,y_2),\dots,(x_n,y_n)\)</span>
+，将其相邻连接就是地面。</p>
+<p>你需要修若干条柱子，只能在给定的点对应的横坐标处修，在第 <span
+class="math inline">\(i\)</span> 个点处修的柱子的高度为 <span
+class="math inline">\(h−x——i\)</span> 。第 <span
+class="math inline">\(1\)</span> 个和第 <span
+class="math inline">\(n\)</span> 个点处必须修柱子。</p>
+<p>你还需要在修的柱子之间造拱，拱是一个半圆形，直径为两个柱子的距离，恰好和桥面相切。</p>
+<p>拱不能和地面相交，可以相切。</p>
+<p>假设你修了 <span class="math inline">\(k\)</span> 条柱子，高度为
+<span class="math inline">\(h_1,h_2,\dots,h_k\)</span> ，修了 <span
+class="math inline">\(k-1\)</span> 个拱，直径为 <span
+class="math inline">\(d_1,d_2,\dots,d_{k−1}\)</span> 。</p>
+<p>给定参数 <span class="math inline">\(\alpha,\beta\)</span>
+，要求最小化代价： <span
+class="math inline">\(\alpha*\sum\limits_{i=1}^k{h_i}+\beta*\sum\limits_{i=1}^{k-1}{(h_{i+1}-h_i)^2}\)</span></p>
+<p>无合法方案输出 <code>impossible</code> 。 <span
+class="math inline">\(n\leq 10^4\)</span> 。</p>
+<h3 id="题解-2">题解</h3>
+<p>显然可以DP，需要做到 <span class="math inline">\(O(1)\)</span>
+的判断一段区间内的点是否都在某个圆内。</p>
+<p>设现在我们由 <span class="math inline">\(f_i\)</span>
+向后转移，新的拱半径为 <span class="math inline">\(r\)</span>
+，则新的拱圆心为 <span class="math inline">\((x_i+r,h-r)\)</span>。</p>
+<p>这样一个点 <span class="math inline">\((x_j,y_j)\)</span>
+在圆内的条件为 <span class="math inline">\((x_j-x_i-r)^2+(y_j-h+r)^2\leq
+r^2\)</span></p>
+<p>整理得 <span
+class="math inline">\(r^2-2(x_i-x_j+y_j-h)r+(x_i-x_j)^2+(y_j-h)^2\leq
+0\)</span></p>
+<p>可以解得 <span class="math inline">\(r_1\leq r\leq r_2\)</span>
+。</p>
+<p>因为拱是一个半圆，所以当 <span class="math inline">\(y_j\leq
+h-r_1\)</span> 时只需要 <span class="math inline">\(r\leq r2\)</span>
+。</p>
+<p>枚举 <span class="math inline">\(j\)</span> 时维护 <span
+class="math inline">\(r\)</span> 的范围即可。</p>
+<p><a
+target="_blank" rel="noopener" href="https://codeforces.com/gym/102511/submission/147766018">code</a></p>
+<h2 id="wf2019-g">WF2019 G</h2>
+<p><a target="_blank" rel="noopener" href="https://codeforces.com/gym/102511/problem/G">link</a></p>
+<h3 id="题意-3">题意</h3>
+<p>有一棵 <span class="math inline">\(n+1\)</span>
+个点的树，每条边上有一个大写字母，每个点所代表的字符串是<strong>由其到根节点</strong>的边上字母依次排列。</p>
+<p>有 <span class="math inline">\(k\)</span> 个询问，每次给定一个字符串
+<span class="math inline">\(S\)</span>
+，求有多少个非根节点代表的字符串以 <span
+class="math inline">\(S\)</span> 为前缀。</p>
+<p><span class="math inline">\(n,k,\sum{\abs{S}}\leq 10^5\)</span></p>
+<h3 id="题解-3">题解</h3>
+<p>这个描述很奇怪。。。首先把所有询问串都反过来，这样这棵树就是一个 trie
+，询问就变成了询问多少个串的后缀是 <span
+class="math inline">\(S\)</span> 。</p>
+<p>对于所有询问串建 AC 自动机，把这棵 trie 放在上面跑，AC
+自动机上沿途所有经过的结点点权 <span
+class="math inline">\(+1\)</span></p>
+<p>询问的答案就是 fail 树上的字数点权和</p>
+<p><a
+target="_blank" rel="noopener" href="https://codeforces.com/gym/102511/submission/147820055">code</a></p>
+<h2 id="neerc-northern-2016-17-j">NEERC, Northern 2016-17 J</h2>
+<p><a target="_blank" rel="noopener" href="https://codeforces.com/gym/101142">link</a></p>
+<h3 id="题意-4">题意</h3>
+<p>有一种语言，只有一种变量 <code>?</code> ，其值在 <span
+class="math inline">\([0,255]\)</span> 内随机，有六种操作
+<code>+ - * / min max</code> 。</p>
+<p>支持进行宏定义。</p>
+<p>给定一个结果 <span class="math inline">\(c\)</span>
+，你只能进行宏定义并写出一个表达式，使得此表达式的值等于 <span
+class="math inline">\(c\)</span> 的概率不小于 <span
+class="math inline">\(\dfrac{1}{2}\)</span> 。</p>
+<p>宏定义与表达式的总长度不超过 <span class="math inline">\(256\)</span>
+。</p>
+<h3 id="题解-4">题解</h3>
+<p>如果需要 <span class="math inline">\(0\)</span> ，依照样例输出
+<code>? / ? / ?</code> 。</p>
+<p>否则，用 <span class="math inline">\(1\)</span> 拼出 <span
+class="math inline">\(2,4,8,16,32,64,128\)</span> 即可获得所有数。</p>
+<p>我们需要七个数都正确的概率大于 <span
+class="math inline">\(\dfrac{1}{2}\)</span> ，即需要 <span
+class="math inline">\(1\)</span> 正确的概率不小于 <span
+class="math inline">\(\dfrac{1}{2}^\frac{1}{7}\approx 90.6\%\)</span>
+。</p>
+<p>考虑将许多个 <span class="math inline">\(?\)</span> 取
+<code>max</code> ，使其大概率为 <span class="math inline">\(255\)</span>
+，然后将两个 <span class="math inline">\(255\)</span> 相除。</p>
+<p>则需要每个 <span class="math inline">\(255\)</span> 正确的概率不小于
+<span class="math inline">\((90.6\%)^\frac{1}{2}\approx 95.2\%\)</span>
+。</p>
+<p>取一个 <code>?</code> 取到 <span class="math inline">\(255\)</span>
+的概率是 <span class="math inline">\(\dfrac{1}{256}\)</span> 。</p>
+<p>所以要保证这个正确概率需要取<span
+class="math inline">\(\log_{\frac{255}{256}}(1-0.952)\approx776\)</span>
+次。</p>
+<p>依靠宏定义使每层套多个上一层 <code>max</code>
+即可在规定长度内通过。</p>
+<p>事实上，可以使正确率超过 <span
+class="math inline">\(1-10^{-10}\)</span> 。</p>
+<p><a
+target="_blank" rel="noopener" href="https://codeforces.com/gym/101142/submission/147903980">code</a></p>
+<p>##NEERC, Northern 2016-17 G</p>
+<p><a target="_blank" rel="noopener" href="https://codeforces.com/gym/101142/problem/G">link</a></p>
+<h3 id="题意-5">题意</h3>
+<p>有棵 <span class="math inline">\(n\)</span>
+个点的树形供水网络，每个叶子是一座房子，根节点是水源。</p>
+<p>有个黑帮占据了一些房子，需要切断尽量少的供水管道使黑帮的水源中断，在此基础上使平民房子受影响尽可能少。</p>
+<p>一开始黑帮没有占据任何房子，有 <span class="math inline">\(q\)</span>
+次操作每次向一个房子加入或移除黑帮，然后询问以上的两个值。</p>
+<p><span class="math inline">\(n,q\leq 10^5\)</span></p>
+<h3 id="题解-5">题解</h3>
+<p>第一问的答案即为根节点有黑帮的儿子数量，很好维护。</p>
+<p>显然切断的是根的每个儿子子树内点的 <code>lca</code>
+，求出这个容易维护第二问答案。</p>
+<p>维护集合 <code>lca</code>
+的最简便方法是在插入/删除点时到根节点链修改，定义节点的偏序以点权为第一关键字，以深度为第二关键字，则答案即为子树最大值。</p>
+<p>树剖即可。</p>
+<p><a
+target="_blank" rel="noopener" href="https://codeforces.com/gym/101142/submission/147936279">code</a></p>
+<h2 id="neerc-northern-2016-17-e">NEERC, Northern 2016-17 E</h2>
+<p><a target="_blank" rel="noopener" href="https://codeforces.com/gym/101142/problem/E">link</a></p>
+<h3 id="题意-6">题意</h3>
+<p>有一篇长为 <span class="math inline">\(l\)</span> 的文章，和一个
+<span class="math inline">\(n\times m\)</span>
+的网格图。网格图上每个格子为 <code>.</code> 或 <code>X</code>。</p>
+<p>你需要从文字中选一段子串，然后选择网格图上的任意一个点 <span
+class="math inline">\((x,y)\)</span> 作为起点，在阅读这段文字时，遇到
+<code>l,r,u,d</code>
+字符时，分别使你当前所在的位置往左、右、上、下移动一格。最终<strong>恰好</strong>画出网格图中
+<code>X</code> 画出的图形。</p>
+<p>问是否可行，如果可行输出你选的子串区间。</p>
+<p><span class="math inline">\(l\leq 10^5,n\times m\leq
+10^5\)</span></p>
+<h3 id="题解-6">题解</h3>
+<p>即一段字串画出的图形和网格图上的图形形状相同。</p>
+<p>只有两个图形 <code>X</code> 的个数相等且两个方向上
+<code>max-min</code> 相等才有可能。</p>
+<p>双指针，转化为 <span class="math inline">\(O(l)\)</span>
+次判断两个图形是否完全一致。</p>
+<p>因为 <span class="math inline">\(n\times m\leq 10^5\)</span>
+，必然又一边小于 <span class="math inline">\(\sqrt{10^5}\)</span>
+，将这一边逐行 <span class="math inline">\(hash\)</span> 判断即可。</p>
+<p><strong>注意细节</strong>。</p>
+<p><a
+target="_blank" rel="noopener" href="https://codeforces.com/gym/101142/submission/148035739">code</a></p>
+
+      
+    </div>
+
+    
+    
+    
+      <footer class="post-footer">
+        <div class="post-eof"></div>
+      </footer>
+  </article>
+  
+  
+  
+
+      
+  
+  
+  <article itemscope itemtype="http://schema.org/Article" class="post-block" lang="zh-CN">
     <link itemprop="mainEntityOfPage" href="http://example.com/2021/06/12/pyyz-notes/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
@@ -766,71 +1030,6 @@
   
   
 
-      
-  
-  
-  <article itemscope itemtype="http://schema.org/Article" class="post-block" lang="zh-CN">
-    <link itemprop="mainEntityOfPage" href="http://example.com/2020/04/18/csp2019/">
-
-    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
-      <meta itemprop="image" content="/images/avatar.gif">
-      <meta itemprop="name" content="BeNaive">
-      <meta itemprop="description" content="">
-    </span>
-
-    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="BeNaive">
-    </span>
-      <header class="post-header">
-        <h2 class="post-title" itemprop="name headline">
-          
-            <a href="/2020/04/18/csp2019/" class="post-title-link" itemprop="url">CSP2019 游记</a>
-        </h2>
-
-        <div class="post-meta">
-            <span class="post-meta-item">
-              <span class="post-meta-item-icon">
-                <i class="far fa-calendar"></i>
-              </span>
-              <span class="post-meta-item-text">发表于</span>
-
-              <time title="创建时间：2020-04-18 13:15:22" itemprop="dateCreated datePublished" datetime="2020-04-18T13:15:22+08:00">2020-04-18</time>
-            </span>
-
-          
-
-        </div>
-      </header>
-
-    
-    
-    
-    <div class="post-body" itemprop="articleBody">
-
-      
-          <p>No Description</p>
-          <!--noindex-->
-            <div class="post-button">
-              <a class="btn" href="/2020/04/18/csp2019/">
-                阅读全文 &raquo;
-              </a>
-            </div>
-          <!--/noindex-->
-        
-      
-    </div>
-
-    
-    
-    
-      <footer class="post-footer">
-        <div class="post-eof"></div>
-      </footer>
-  </article>
-  
-  
-  
-
 
   
   <nav class="pagination">
@@ -900,7 +1099,7 @@
       <div class="site-state-item site-state-posts">
           <a href="/archives/">
         
-          <span class="site-state-item-count">11</span>
+          <span class="site-state-item-count">12</span>
           <span class="site-state-item-name">日志</span>
         </a>
       </div>
