@@ -5,10 +5,7 @@ mathjax: true
 date: 2022-02-22 21:07:07
 updated: 2022-02-28 11:06:41
 tags: 题解
-hidden: true
 ---
-
-### 大概两个周之后就会鸽了。。。看看鸽之前能做多少吧
 
 ## NEERC 17 K
 
