@@ -1,6 +1,6 @@
 ---
 title: IOI2021集训队作业乱做
-description: 即将鸽掉的东西
+description: 
 mathjax: true
 date: 2022-02-22 21:07:07
 updated: 2022-02-28 11:06:41
@@ -209,4 +209,3 @@ $l\leq 10^5,n\times m\leq 10^5$
 **注意细节**。
 
 [code](https://codeforces.com/gym/101142/submission/148035739)
-
