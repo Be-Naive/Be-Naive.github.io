@@ -6,6 +6,7 @@ updated: 2021-06-20 21:02:30
 description: 私人备忘录
 password: memo906854mo.
 tags:
+- 备忘
 ---
 
 # cards
@@ -71,3 +72,5 @@ portable git:设好PATH，用cmd访问
 hexo 目录：/node_modules/.bin
 
 deploy.sh程序：clean，g，add .，commit，push，deploy
+
+
